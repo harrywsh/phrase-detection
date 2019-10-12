@@ -49,20 +49,19 @@ def patternSearch(T_0, file):
             if p not in phrase_patterns:
                 phrase_patterns.add(p)
     # find patterns around seed phrases
-    extraction_pattern = []
-    new_phrases = set()
-    matcher = Matcher(nlp.vocab)
+    content_pattern = []
+    context_pattern = []
     with open(file, "r") as f:
         text = nlp(f.read().lower())
         for phrase_pattern in phrase_patterns:
             start = phrase_pattern[0]
             end = phrase_pattern[1]
             # # add content pattern 
-            # tmp = []
-            # span = text[start:end]
-            # for token in span:
-            #     tmp.append({"POS": token.pos_})
-            # extraction_pattern.append(tmp)
+            tmp = []
+            span = text[start:end]
+            for token in span:
+                tmp.append({"POS": token.pos_})
+            content_pattern.append(tmp)
             # add context pattern
             tmp = []
             for i in range(2, 0, -1):
@@ -70,20 +69,35 @@ def patternSearch(T_0, file):
             tmp.append({"TEXT": {"REGEX": "[a-zA-Z0-9_]"}, "OP":"+"})
             for i in range(3):
                 tmp.append({"TEXT": text[end + i].text})
-            extraction_pattern.append(tmp)
-            for ep in extraction_pattern:
-                print(ep)
-                matcher.add("find new", None, ep)
-                matches = matcher(text)
-                for match_id, start, end in matches:
-                    new_phrase = text[start+2:end-2].text
-                    if new_phrase not in new_phrases:
-                        new_phrases.add(new_phrase)
-                matcher.remove("find new")
+            context_pattern.append(tmp)
 
     # get new phrases
-    return extraction_pattern, new_phrases
+    return content_pattern, context_pattern
 
 seed = ['machine learning', 'database system', 'natural language processing']
-ep, n = patternSearch(seed, 'test.txt')
+content_p, context_p = patternSearch(seed, 'test.txt')
+print(content_p)
+# find new phrases
+new_phrases = set()
+with open('test.txt', 'r') as f:
+    t = f.read().lower()
+    matcher = Matcher(nlp.vocab)
+    doc = nlp(t)
+    for cp in content_p:
+        matcher.add("mining", None, cp)
+        matches = matcher(doc)
+        for match_id, start, end in matches:
+            span = doc[start:end].text
+            if span not in new_phrases:
+                new_phrases.add(span)
+        matcher.remove("mining")
+    for cp in context_p:
+        matcher.add("mining", None, cp)
+        matches = matcher(doc)
+        for match_id, start, end in matches:
+            span = doc[start+2:end-3].text
+            if span not in new_phrases:
+                new_phrases.add(span)
+        matcher.remove("mining")
+print(new_phrases)
 #%%
