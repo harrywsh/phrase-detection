@@ -32,7 +32,15 @@ def extractor(document, *pattern):
         phrases.append(span.text)
     return phrases
 
-
+def partition(file, size = 1000000):
+    '''
+    partition the input file into block with maximum size of 1000000, since SpaCy v2.x parser may have issues allocating memory with size larger than 1000000
+    '''
+    while True:
+        data = file.read(size).lower()
+        if not data:
+            break
+        yield data
 
 #%%
 def patternSearch(T_0, file):
@@ -74,30 +82,36 @@ def patternSearch(T_0, file):
     # get new phrases
     return content_pattern, context_pattern
 
-seed = ['machine learning', 'database system', 'natural language processing']
+def phraseExtraction(file, content_pattern, context_pattern):
+    new_phrases = set()
+    with open('test.txt', 'r') as f:
+        t = f.read().lower()
+        matcher = Matcher(nlp.vocab)
+        doc = nlp(t)
+        for cp in content_pattern:
+            matcher.add("extraction", None, cp)
+            matches = matcher(doc)
+            for match_id, start, end in matches:
+                span = doc[start:end].text
+                if span not in new_phrases:
+                    new_phrases.add(span)
+            matcher.remove("extraction")
+        for cp in context_pattern:
+            matcher.add("extraction", None, cp)
+            matches = matcher(doc)
+            for match_id, start, end in matches:
+                span = doc[start+2:end-3].text
+                if span not in new_phrases:
+                    new_phrases.add(span)
+            matcher.remove("extraction")
+    return new_phrases
+
+seed = set(['machine learning', 'database system', 'c++'])
 content_p, context_p = patternSearch(seed, 'test.txt')
-print(content_p)
-# find new phrases
-new_phrases = set()
-with open('test.txt', 'r') as f:
-    t = f.read().lower()
-    matcher = Matcher(nlp.vocab)
-    doc = nlp(t)
-    for cp in content_p:
-        matcher.add("mining", None, cp)
-        matches = matcher(doc)
-        for match_id, start, end in matches:
-            span = doc[start:end].text
-            if span not in new_phrases:
-                new_phrases.add(span)
-        matcher.remove("mining")
-    for cp in context_p:
-        matcher.add("mining", None, cp)
-        matches = matcher(doc)
-        for match_id, start, end in matches:
-            span = doc[start+2:end-3].text
-            if span not in new_phrases:
-                new_phrases.add(span)
-        matcher.remove("mining")
+new_phrases = phraseExtraction('test.txt', content_p, context_p)
 print(new_phrases)
+content_p, context_p = patternSearch(new_phrases, 'test.txt')
+new_phrases = phraseExtraction('test.txt', content_p, context_p)
+print(new_phrases)
+
 #%%
