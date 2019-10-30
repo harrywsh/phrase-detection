@@ -69,7 +69,8 @@ def patternSearch(T_0, file):
             span = text[start:end]
             for token in span:
                 tmp.append({"POS": token.pos_})
-            content_pattern.append(tmp)
+            if tmp not in content_pattern:
+                content_pattern.append(tmp)
             # add context pattern
             tmp = []
             for i in range(2, 0, -1):
@@ -77,7 +78,11 @@ def patternSearch(T_0, file):
             tmp.append({"TEXT": {"REGEX": "[a-zA-Z0-9_]"}, "OP":"+"})
             for i in range(3):
                 tmp.append({"TEXT": text[end + i].text})
-            context_pattern.append(tmp)
+                if text[end + i].text == '\n':
+                    break
+            if tmp not in context_pattern:
+                context_pattern.append(tmp)
+                print(tmp)
 
     # get new phrases
     return content_pattern, context_pattern
@@ -100,18 +105,21 @@ def phraseExtraction(file, content_pattern, context_pattern):
             matcher.add("extraction", None, cp)
             matches = matcher(doc)
             for match_id, start, end in matches:
-                span = doc[start+2:end-3].text
+                span = doc[start+2:end-(len(cp)-3)].text
                 if span not in new_phrases:
                     new_phrases.add(span)
             matcher.remove("extraction")
     return new_phrases
 
-seed = set(['machine learning', 'database system', 'c++'])
+#%%
+seed = set(['machine learning', 'database system', 'cryptographic algorithm'])
 content_p, context_p = patternSearch(seed, 'test.txt')
 new_phrases = phraseExtraction('test.txt', content_p, context_p)
-print(new_phrases)
-content_p, context_p = patternSearch(new_phrases, 'test.txt')
-new_phrases = phraseExtraction('test.txt', content_p, context_p)
-print(new_phrases)
+# print(new_phrases)
 
 #%%
+content_p, context_p = patternSearch(new_phrases, 'test.txt')
+new_new_phrases = phraseExtraction('test.txt', content_p, context_p)
+
+# %%
+new_new_phrases.difference(new_phrases)
