@@ -64,62 +64,52 @@ def patternSearch(T_0, file):
         for phrase_pattern in phrase_patterns:
             start = phrase_pattern[0]
             end = phrase_pattern[1]
+            if (text[start - 1].text == '\n'):
+                continue
             # # add content pattern 
-            tmp = []
-            span = text[start:end]
-            for token in span:
-                tmp.append({"POS": token.pos_})
-            if tmp not in content_pattern:
-                content_pattern.append(tmp)
-            # add context pattern
             tmp = []
             for i in range(2, 0, -1):
                 tmp.append({"TEXT": text[start - i].text})
-            tmp.append({"TEXT": {"REGEX": "[a-zA-Z0-9_]"}, "OP":"+"})
-            for i in range(3):
-                tmp.append({"TEXT": text[end + i].text})
-                if text[end + i].text == '\n':
-                    break
+            # tmp.append({"TEXT": {"REGEX": "[a-zA-Z0-9_]"}, "OP":"+"})
+            span = text[start:end]
+            for token in span:
+                tmp.append({"POS": token.pos_})
+            # for i in range(3):
+            #     tmp.append({"TEXT": text[end + i].text})
+            #     if text[end + i].text == '\n':
+            #         break
             if tmp not in context_pattern:
                 context_pattern.append(tmp)
                 print(tmp)
 
     # get new phrases
-    return content_pattern, context_pattern
+    return context_pattern
 
-def phraseExtraction(file, content_pattern, context_pattern):
+def phraseExtraction(file, context_pattern):
     new_phrases = set()
     with open('test.txt', 'r') as f:
         t = f.read().lower()
         matcher = Matcher(nlp.vocab)
         doc = nlp(t)
-        for cp in content_pattern:
-            matcher.add("extraction", None, cp)
-            matches = matcher(doc)
-            for match_id, start, end in matches:
-                span = doc[start:end].text
-                if span not in new_phrases:
-                    new_phrases.add(span)
-            matcher.remove("extraction")
         for cp in context_pattern:
             matcher.add("extraction", None, cp)
             matches = matcher(doc)
             for match_id, start, end in matches:
-                span = doc[start+2:end-(len(cp)-3)].text
+                span = doc[start+2:end].text
                 if span not in new_phrases:
                     new_phrases.add(span)
             matcher.remove("extraction")
     return new_phrases
 
 #%%
-seed = set(['machine learning', 'database system', 'cryptographic algorithm'])
-content_p, context_p = patternSearch(seed, 'test.txt')
-new_phrases = phraseExtraction('test.txt', content_p, context_p)
-# print(new_phrases)
+seed = set(['multimedia data types', 'database system', 'cryptographic algorithm'])
+context_p = patternSearch(seed, 'test.txt')
+# print(context_p)
+new_phrases = phraseExtraction('test.txt', context_p)
+print(new_phrases)
 
-#%%
-content_p, context_p = patternSearch(new_phrases, 'test.txt')
-new_new_phrases = phraseExtraction('test.txt', content_p, context_p)
+new_p = patternSearch(new_phrases, 'test.txt')
+pnn = phraseExtraction('test.txt', new_p)
+print(pnn)
 
 # %%
-new_new_phrases.difference(new_phrases)
