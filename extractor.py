@@ -135,6 +135,7 @@ def patternSearch(T_0, file):
                 context_graph.add_edge(node_t, node_c, weight=occur)
                 context_graph.add_edge(node_c, node_p, weight=occur)
     # draw context graph
+    plt.figure()
     pos=nx.get_node_attributes(context_graph,'pos')
     nx.draw(context_graph, pos, with_labels=True)
     labels = nx.get_edge_attributes(context_graph, 'weight')
@@ -144,8 +145,8 @@ def patternSearch(T_0, file):
 
 #%%
 seed = set(['multimedia data types', 'database system', 'cryptographic algorithm'])
-new_phrases = patternSearch(seed, 'small.txt')
+new_phrases = patternSearch(seed, 'test.txt')
+new_new_phrases = patternSearch(new_phrases, 'test.txt')
 # print(context_p)
 print(new_phrases)
-
-# %%
+print(new_new_phrases)
