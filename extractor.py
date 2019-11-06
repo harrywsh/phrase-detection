@@ -145,8 +145,18 @@ def patternSearch(T_0, file):
 
 #%%
 seed = set(['multimedia data types', 'database system', 'cryptographic algorithm'])
-new_phrases = patternSearch(seed, 'test.txt')
-new_new_phrases = patternSearch(new_phrases, 'test.txt')
+new_phrases = patternSearch(seed, 'small.txt')
+new_new_phrases = patternSearch(new_phrases, 'small.txt')
 # print(context_p)
 print(new_phrases)
 print(new_new_phrases)
+
+#%% 
+seed = set(['multimedia data types', 'database system', 'cryptographic algorithm'])
+new_phrases = patternSearch(seed, 'small.txt')
+new_new_phrases = patternSearch(new_phrases, 'small.txt')
+# print(context_p)
+print(new_phrases)
+print(new_new_phrases)
+
+# %%
