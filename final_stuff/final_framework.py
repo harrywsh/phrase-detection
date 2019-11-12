@@ -43,19 +43,20 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
     context_matrix = np.zeros((len(unranked_phrases), len(unranked_patterns)))
     # find c (t, p)
     with open(file, 'r') as f:
-        t = f.read().lower()
+        file_chunk = partition(f)
         matcher = Matcher(nlp.vocab)
-        doc = nlp(t)
-        for i in range(len(unranked_patterns)):
-            matcher.add("extraction", None, unranked_patterns[i])
-            matches = matcher(doc)
-            for match_id, start, end in matches:
-                span = doc[start+2:end].text
-                j = unranked_phrases.index(span)
-                context_matrix[j, i] += 1
-                id2patterns[j].add(i)
-                pattern2ids[i].add(j)
-            matcher.remove("extraction")
+        for t in file_chunk:
+            doc = nlp(t)
+            for i in range(len(unranked_patterns)):
+                matcher.add("extraction", None, unranked_patterns[i])
+                matches = matcher(doc)
+                for match_id, start, end in matches:
+                    span = doc[start+2:end].text
+                    j = unranked_phrases.index(span)
+                    context_matrix[j, i] += 1
+                    id2patterns[j].add(i)
+                    pattern2ids[i].add(j)
+                matcher.remove("extraction")
 
 
     id2sup = {key:len(val) for key, val in id2patterns.items()}
@@ -68,37 +69,38 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
     return l1, l2, l3, l4, m1, m2, m3, m4
 
 def patternSearch(T_0, T, file):
-    phrase_patterns = set()
     current_patterns = [nlp(x) for x in T]
     phrase_matcher = PhraseMatcher(nlp.vocab)
     phrase_matcher.add('pattern search', None, *current_patterns)
+    unranked_patterns = []
     # find occurrences of seed phrases
     with open(file, "r") as f:
-        document = nlp(f.read().lower())
-        matches = phrase_matcher(document)
-        for match_id, start, end in matches:
-            p = tuple((start, end))
-            if p not in phrase_patterns:
-                phrase_patterns.add(p)
+        file_chunk = partition(f)
+        for document in file_chunk:
+            print(len(document))
+            document = nlp(document)
+            phrase_patterns = set()
+            matches = phrase_matcher(document)
+            for match_id, start, end in matches:
+                p = tuple((start, end))
+                if p not in phrase_patterns:
+                    phrase_patterns.add(p)
     # find patterns around seed phrases
-    unranked_patterns = []
-    with open(file, "r") as f:
-        text = nlp(f.read().lower())
-        for phrase_pattern in phrase_patterns:
-            start = phrase_pattern[0]
-            end = phrase_pattern[1]
-            if (text[start - 1].text == '\n'):
-                continue
-            # add context pattern
-            tmp = []
-            for i in range(2, 0, -1):
-                tmp.append({"TEXT": text[start - i].text})
-            # add content pattern
-            span = text[start:end]
-            for token in span:
-                tmp.append({"POS": token.pos_})
-            if tmp not in unranked_patterns:
-                unranked_patterns.append(tmp)
+            for phrase_pattern in phrase_patterns:
+                start = phrase_pattern[0]
+                end = phrase_pattern[1]
+                if (document[start - 1].text == '\n'):
+                    continue
+                # add context pattern
+                tmp = []
+                for i in range(2, 0, -1):
+                    tmp.append({"TEXT": document[start - i].text})
+                # add content pattern
+                span = document[start:end]
+                for token in span:
+                    tmp.append({"POS": token.pos_})
+                if tmp not in unranked_patterns:
+                    unranked_patterns.append(tmp)
     unranked_phrases = list(getPhrases(file, unranked_patterns))
 
 # -------- Graph Generating Code --------
@@ -203,20 +205,26 @@ if (__name__ == "__main__"):
 
     seed = set(["machine learning", "query optimization", "RSA encryption", "tensor algebra"])
     keywords = seed
-    filename = "./data/" + "test.txt"
+    filename = "./data/" + "small.txt"
     iter_num = 5
     k_depth = 50
-    results_filename = "./outputs/" + "results1.txt"
+    results_filename = "./outputs/" + "results2.txt"
+    lower_filename = filename[:-4] + "_lower.txt"
+    
+    with open(lower_filename, "w+") as f:
+        with open(filename, "r") as fn:
+            t = fn.read().lower()
+            f.write(t)
 
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
             print("Iteration " + str(i+1) + "...\n")
-            sorted_patterns = patternSearch(seed, keywords, filename)
+            sorted_patterns = patternSearch(seed, keywords, lower_filename)
             f.write("\nSorted Patterns:\n")
             for pattern in sorted_patterns[0:k_depth]:
                 f.write(str(pattern))
                 f.write("\n")
-            sorted_keywords = tuple_search(seed, sorted_patterns, filename, k_depth)
+            sorted_keywords = tuple_search(seed, sorted_patterns, lower_filename, k_depth)
             f.write("Sorted Keywords:\n")
             f.write(str(sorted_keywords))
             keywords = sorted_keywords
