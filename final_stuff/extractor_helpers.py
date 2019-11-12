@@ -38,7 +38,7 @@ def partition(file, size = 1000000):
     partition the input file into block with maximum size of 1000000, since SpaCy v2.x parser may have issues allocating memory with size larger than 1000000
     '''
     while True:
-        data = file.read(size).lower()
+        data = file.read(size)
         if not data:
             break
         yield data
@@ -47,16 +47,17 @@ def partition(file, size = 1000000):
 def getPhrases(file, context_pattern):
     new_phrases = set()
     with open(file, 'r') as f:
-        t = f.read().lower()
         matcher = Matcher(nlp.vocab)
-        doc = nlp(t)
-        for cp in context_pattern:
-            matcher.add("extraction", None, cp)
-            matches = matcher(doc)
-            for match_id, start, end in matches:
-                span = doc[start+2:end].text
-                if span not in new_phrases:
-                    new_phrases.add(span)
-#                     print(span)
-            matcher.remove("extraction")
+        file_chunk = partition(f)
+        for t in file_chunk:
+            doc = nlp(t)
+            for cp in context_pattern:
+                matcher.add("extraction", None, cp)
+                matches = matcher(doc)
+                for match_id, start, end in matches:
+                    span = doc[start+2:end].text
+                    if span not in new_phrases:
+                        new_phrases.add(span)
+    #                     print(span)
+                matcher.remove("extraction")
     return new_phrases
