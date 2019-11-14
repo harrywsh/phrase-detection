@@ -48,10 +48,15 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
         for t in file_chunk:
             doc = nlp(t)
             for i in range(len(unranked_patterns)):
+                offset = 0
+                for pattern_dict in unranked_patterns[i]:
+                    if 'POS' in pattern_dict:
+                        break
+                    offset += 1
                 matcher.add("extraction", None, unranked_patterns[i])
                 matches = matcher(doc)
                 for match_id, start, end in matches:
-                    span = doc[start+2:end].text
+                    span = doc[start+offset:end].text
                     j = unranked_phrases.index(span)
                     context_matrix[j, i] += 1
                     id2patterns[j].add(i)
@@ -94,6 +99,9 @@ def patternSearch(T_0, T, file):
                 # add context pattern
                 tmp = []
                 for i in range(2, 0, -1):
+                    if document[start - 1].tag_ == "IN":
+                        tmp.append({"TEXT": document[start - 1].text})
+                        break
                     tmp.append({"TEXT": document[start - i].text})
                 # add content pattern
                 span = document[start:end]
@@ -203,12 +211,12 @@ def tuple_search(T_0, sorted_patterns, file, k_depth):
 
 if (__name__ == "__main__"):
 
-    seed = set(["machine learning", "query optimization", "RSA encryption", "tensor algebra"])
+    seed = set(["machine learning", "query optimization", "RSA encryption", "distributed database systems"])
     keywords = seed
     filename = "./data/" + "small.txt"
     iter_num = 5
     k_depth = 50
-    results_filename = "./outputs/" + "results2.txt"
+    results_filename = "./outputs/" + "results_small.txt"
     lower_filename = filename[:-4] + "_lower.txt"
     
     with open(lower_filename, "w+") as f:
