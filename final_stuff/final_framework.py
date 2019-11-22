@@ -213,7 +213,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords)
 
 if (__name__ == "__main__"):
 
-    seed = set(["machine learning", "query optimization", "RSA encryption", "distributed database systems"])
+    seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "distributed database systems"])
     keywords = seed
     filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
     iter_num = 3
