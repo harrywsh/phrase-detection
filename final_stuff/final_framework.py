@@ -14,6 +14,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
+import sys
+from os import path, remove
 
 from prdualrank import prDualRank
 from extractor_helpers import *
@@ -181,9 +183,9 @@ def patternSearch(T_0, T, file):
 
     return sorted_patterns
 
-def tuple_search(T_0, sorted_patterns, file, k_depth):
+def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords):
 
-    sorted_patterns = sorted_patterns[0:k_depth]
+    sorted_patterns = sorted_patterns[0:k_depth_patterns]
     unranked_phrases = list(getPhrases(file, sorted_patterns))
 
     l1, l2, l3, l4, m1, m2, m3, m4 = run_prdualrank(T_0, sorted_patterns, unranked_phrases, file)
@@ -205,7 +207,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth):
     sorted_phrases_ids = sorted(phrase2fscore, key=phrase2fscore.__getitem__, reverse=True)
     sorted_phrases = [unranked_phrases[i] for i in sorted_phrases_ids]
 
-    sorted_phrases = sorted_phrases[0:k_depth]
+    sorted_phrases = sorted_phrases[0:k_depth_keywords]
 
     return sorted_phrases
 
@@ -213,10 +215,19 @@ if (__name__ == "__main__"):
 
     seed = set(["machine learning", "query optimization", "RSA encryption", "distributed database systems"])
     keywords = seed
-    filename = "./data/" + "small.txt"
-    iter_num = 5
-    k_depth = 50
-    results_filename = "./outputs/" + "results_small.txt"
+    filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
+    iter_num = 3
+    k_depth_patterns = int(sys.argv[2]) # 100
+    k_depth_keywords = int(sys.argv[3]) # 500
+    results_filename = "./outputs/" + sys.argv[4] # "./outputs/" + "results_small.txt"
+    
+    if (path.exists(filename) == False):
+        print("\nWarning: the data file does not exist!\n")
+        sys.exit()
+    if (path.exists(results_filename) == True):
+        print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
+        sys.exit()
+    
     lower_filename = filename[:-4] + "_lower.txt"
     
     with open(lower_filename, "w+") as f:
@@ -229,10 +240,12 @@ if (__name__ == "__main__"):
             print("Iteration " + str(i+1) + "...\n")
             sorted_patterns = patternSearch(seed, keywords, lower_filename)
             f.write("\nSorted Patterns:\n")
-            for pattern in sorted_patterns[0:k_depth]:
+            for pattern in sorted_patterns[0:k_depth_patterns]:
                 f.write(str(pattern))
                 f.write("\n")
-            sorted_keywords = tuple_search(seed, sorted_patterns, lower_filename, k_depth)
+            sorted_keywords = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords)
             f.write("Sorted Keywords:\n")
             f.write(str(sorted_keywords))
             keywords = sorted_keywords
+    
+    remove(lower_filename)
