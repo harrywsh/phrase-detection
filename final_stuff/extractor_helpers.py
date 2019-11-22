@@ -1,6 +1,8 @@
 import spacy
 from spacy.matcher import Matcher
 from spacy.matcher import PhraseMatcher
+from spacy.tokenizer import Tokenizer
+import re
 
 from whoosh.qparser import QueryParser
 import whoosh.index as index
@@ -15,6 +17,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 nlp = spacy.load('en_core_web_sm')
+infixes = tuple([r"'s\b", r"(?<!\d)\.(?!\d)"]) +  nlp.Defaults.prefixes
+infix_re = spacy.util.compile_infix_regex(infixes)
+
+def custom_tokenizer(nlp):
+    return Tokenizer(nlp.vocab, infix_finditer=infix_re.finditer)
+
+nlp.tokenizer = custom_tokenizer(nlp)
 
 def extractor(document, *pattern):
     '''
