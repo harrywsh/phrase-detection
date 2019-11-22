@@ -246,6 +246,6 @@ if (__name__ == "__main__"):
             sorted_keywords = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords)
             f.write("Sorted Keywords:\n")
             f.write(str(sorted_keywords))
-            keywords = sorted_keywords
+            keywords = keywords.union(sorted_keywords)
     
     remove(lower_filename)
