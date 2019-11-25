@@ -16,6 +16,7 @@ import numpy as np
 from tqdm import tqdm
 import sys
 from os import path, remove
+import copy
 
 from prdualrank import prDualRank
 from extractor_helpers import *
@@ -214,7 +215,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords)
 if (__name__ == "__main__"):
 
     seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "distributed database systems"])
-    keywords = seed
+    keywords = copy.deepcopy(seed)
     filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
     iter_num = 3
     k_depth_patterns = int(sys.argv[2]) # 100
