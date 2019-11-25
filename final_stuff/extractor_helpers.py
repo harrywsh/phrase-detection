@@ -1,4 +1,5 @@
 import spacy
+spacy.require_gpu()
 from spacy.matcher import Matcher
 from spacy.matcher import PhraseMatcher
 from spacy.tokenizer import Tokenizer
