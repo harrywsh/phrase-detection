@@ -208,9 +208,13 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords)
     sorted_phrases_ids = sorted(phrase2fscore, key=phrase2fscore.__getitem__, reverse=True)
     sorted_phrases = [unranked_phrases[i] for i in sorted_phrases_ids]
 
+    keyword2fscore = {}
+    for i in sorted_phrases_ids:
+        keyword2fscore[unranked_phrases[i]] = phrase2fscore[i]
+
     sorted_phrases = sorted_phrases[0:k_depth_keywords]
 
-    return sorted_phrases
+    return sorted_phrases, keyword2fscore
 
 if (__name__ == "__main__"):
 
@@ -221,16 +225,20 @@ if (__name__ == "__main__"):
     k_depth_patterns = int(sys.argv[2]) # 100
     k_depth_keywords = int(sys.argv[3]) # 500
     results_filename = "./outputs/" + sys.argv[4] # "./outputs/" + "results_small.txt"
-    
+
     if (path.exists(filename) == False):
         print("\nWarning: the data file does not exist!\n")
         sys.exit()
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
-    
+
     lower_filename = filename[:-4] + "_lower.txt"
-    
+
+    keyword2fscore = {}
+    for seed_word in seed:
+        keyword2fscore[seed_word] = 1.0
+
     with open(lower_filename, "w+") as f:
         with open(filename, "r") as fn:
             t = fn.read().lower()
@@ -244,9 +252,16 @@ if (__name__ == "__main__"):
             for pattern in sorted_patterns[0:k_depth_patterns]:
                 f.write(str(pattern))
                 f.write("\n")
-            sorted_keywords = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords)
+            sorted_keywords, iter_keyword2fscore = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords)
             f.write("Sorted Keywords:\n")
             f.write(str(sorted_keywords))
             keywords = keywords.union(sorted_keywords)
-    
+            for iter_word in sorted_keywords:
+                if iter_word not in keyword2fscore or keyword2fscore[iter_word] < iter_keyword2fscore[iter_word]:
+                    keyword2fscore[iter_word] = iter_keyword2fscore[iter_word]
+        final_keywords_set = sorted(keyword2fscore, key=keyword2fscore.__getitem__, reverse=True)
+        final_keywords_list = [(word, keyword2fscore[word]) for word in final_keywords_set]
+        f.write("Final Sorted Keywords:\n")
+        f.write(str(final_keywords_list))
+
     remove(lower_filename)
