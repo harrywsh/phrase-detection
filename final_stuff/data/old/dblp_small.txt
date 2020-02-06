@@ -1,0 +1,422 @@
+spectre attacks: exploiting speculative execution.
+meltdown
+computer science curricula 2013
+an evaluation of object-oriented dbms developments: 1994 edition.
+darwin: on the incremental migration of legacy information systems
+integrating heterogeneous, autonomous, distributed applications using the dom prototype.
+object model capabilities for distributed object management.
+integrating object-oriented applications and middleware with relational databases.
+towards a transaction management system for dom.
+a 'risc' object model for object system interoperation: concepts and applications.
+metaobject protocol concepts for a risc object model.
+object data language facilities for multimedia data types.
+object data model facilities for multimedia data types.
+distributed object management technology.
+experiments with dispatching in a distributed object system.
+muffin: a distributed database machine
+object oriented dbms as a generalization of relational dbms
+inheritance for adts (revised)
+modification of user defined types
+object adts (with improvements for value adts)
+unification of value and object adts
+die repräsentation räumlichen wissens und die behandlung von einbettungsproblemen mit quadtreedepiktionen
+algebraical optimization of fta-expressions
+wissensrepräsentation und maschinelles lernen
+an algebraic characterization of stuf
+a combined symbolic-empirical apprach for the automatic translation of compounds
+zur systemarchitektur von lilog
+mengenorientierte auswertung von anfragen in der logikprogrammiersprache prolog
+definite resolution over constraint languages
+dokumentation der syntax der lilog-grammatik
+cognitive linguistics: the processing of spatial concepts
+lilog-db: database support for knowledge-based systems
+differential closure computation for general horn-clause queries
+sql/data system for vse: a relational data system for application development.
+a logical operational semantics of full prolog
+ein fact manager zur persistenten speicherung variabel strukturierter komplexer objekte
+how could a good system of practical nlp look like?
+möglichkeiten des einsatzes eines dreiwertigen theorembeweisers
+attribute inheritance implemented on top of a relational database system
+lmt - machine translation demonstration
+implementation aspects of a natural language understanding system in a prolog/db environment
+sort processing in a deductive database system
+efta: a database retrieval algebra for feature terms
+knowledge in operation
+an overview on planning applications in protos-l
+über ansätze zur darstellung von konzepten und prototypen
+attributive concept descriptions with unions and complements
+ein praktischer algorithmus für die e-unifikation
+simulation sprachlichen verstehens: generelle probleme bei der semantischen interpretation der natürlichen sprache
+the institute for knowledge based systems in the ibm germany scientific center
+konzeption und implementierung von gleichheit für einen tableau-basierten theorem-beweiser
+protos-l: towards a knowledge base programming language
+syntaktische informationseinheiten zu deutschen adjektiven
+on the interpretation of equality, sorts, and logic programming
+ding - ein domänen-orientierter inkrementeller und integrierter generator für kohärente texte
+prozedurale semantik. repräsentation der sprechergegenwart.
+elsaß-wanderung für linguisten: exemplarische analyse und repräsentation eines satzes aus einer reisebeschreibung
+"dictionary dialog" - entwurf des funktionsumfangs für eine benutzerschnittstelle eines integrierten maschinellen/maschinenunterstützten übersetzungssystems und prototypische erstellung der bildschirmfolge für die funktion "semantische relation"
+zur behandlung komplexer objekte in lilog
+computational aspects of three-valued logic
+semantics of logic programs with equational abstract data type specifications
+processing spatial knowledge in lilog
+a reusable lexical database tool for machine translation
+der lambek-kalkül. eine logik für lexikalische grammatiken
+parenthetische konstruktionen des deutschen.
+symmetric coordination: an alternative theory of phrase structure
+an approach to manage large inheritance networks
+on the problem of masking special errors by serial signature analysis
+eine dreiwertige logik zur verarbeitung partieller information
+an inference engine for function free logic programs
+aspekte der generierung von wegbeschreibungen
+das projekt except: expert-system for computer-aided environmental planning tasks
+a formal operational semantics for prolog iii: using dynamic algebras
+subsumtion für eine erweiterte attributive sortenbeschreibungssprache
+mathematische grundlagen der formalen linguistik - ein kompendium
+die struktur des lexikons für lilog
+die konzeption des except-systems: ein überblick
+richtungsangabe oder wegkonnektor? rämliches "zurück" und seine semantik
+vorüberlegungen zur depiktionalen repräsentation räumlichen wissens
+fully persistent b
+der modale infinitiv: syntaktische oder lexikalische beschreibung?
+database snapshots.
+at ease with "at"
+datenbankunterstützung für wissensbasierte systeme
+die ontologie und axiomatik der wissensbasis von leu/2 - erfahrungen, probleme, ausblicke
+temporales schließen in einem natürlichsprachlichen system
+zur intelligenten organisation von wissensbeständen in künstlichen systemen
+the semantics of asserting and retracting clauses to logic programs
+correctness proof for the wam
+word order and focus projection
+kl-one: eine einführung
+improving the concurrency of integrity checks and write operations
+über vergleichskonstruktionen
+ereignisse: ihre logik und ontologie aus textsemantischer sicht
+der lilog-db fact manager: ein datenbankkern zur speicherung variabel strukturierter komplexer objekte
+wissensbasierte systeme in der medizin: gmds/gi, abstracts des 1. gemeinsamen workshops der ag expertensysteme der gmds und der fg diagnostik und klassifikation im gi-fachausschuß 1.5, 29.-30. märz 1990, heidelberg
+an environment for experimentation with parsing strategies
+logisches clustering von protos-l prozeduren
+multiword lexemes: a monolingual and contrastive typology for nlp and mt
+a model elimination calculus for generalized clauses
+quantitative analysen zu wörterbüchern
+lexical representation of idioms
+the lilog knowledge representation system
+mengenkonzepte in unifikationsgrammatiken
+the gamma-0 n-ary relational data base interface specifications of objects and operations.
+on the treatment of compounds in machine translation. a study
+position und bewegung: zur semantik lokaler verben
+zur systematik morphologischer paradigmen: die deutschen verben in der computermorphologie
+a wam extension for type-constraint logic programming: specification and correctness proof
+domain restriction and other kinds of reference set operations in sentence and discourse semantics.
+umweltbewertung mit except: darstellung aus ökologischer sicht
+lernverfahren zur vervollständigung von hornklauselmengen durch inverse resolution
+ein beispiel zur wissensbasierten produktionsplanung mit protos-l.
+zum begriff "argumentstruktur" im rahmen generativer worbildungstheoretischer ansätze
+standards für das programmieren in prolog für lilog, version 2.0
+the term retrieval abstract machine
+syntaktische analysevorschläge zur behandlung von lokalen präfixverben in einem system für die generierung von wegbeschreibungen
+feature constraint logics for unification grammars
+ein transaktionskonzept für lilog
+disjunctive unification
+ereignisse und repräsentationen
+on the role of reasoning about change in the projection of presuppositions
+a logical operational semantics of full prolog part ii: built-in predicates for database manipulations
+a brief overlook of lilog-db
+leistungsanalyse des datenbanksystems lilog-db
+rendezvous version 1: an experimental english language query formulation system for casual users of relational data bases.
+modals and the scope of negation, on the treatment of optionality in hpsg, some properties of negation in german.
+tableau calculus for order sorted logic
+parsingstrategien für unifikationsgrammatiken mit id/lp-regeln
+sort-lattice management in lilog-db
+sorted feature terms and relational dependencies
+reasoning for text understanding - knowledge processing in the 1st lilog-prototype
+zur syntax pränominaler elemente in einer kategorialen unifikationsgrammatik des deutschen
+wissensbasisverwaltung für lilog
+how to fit the lambek calculus into the chomsky hierarchy
+erweiterung der wissensrepräsentationssprache l-lilog um konstrukte zur spezifikation von kontrollinformation
+strategien zur pronominalisierung
+index path length evaluation for the research storage system of system r.
+"der film öded das publikum" - zum aufbau eines maschinenlesbaren wörterbuchs für deutsche verben
+operationen in erweiterten typunifikationsformalismen
+webs - ein system zur generierung von wegbeschreibungen
+statistische untersuchungen an einsprachigen zeitungstexten
+international workshop on terminological logics - proceedings
+lilog - linguistische und logische methoden für das maschinelle verstehen des deutschen - projektbeschreibung
+mathematical logic and artificial intelligence
+syntaktische merkmale deutsche substantive
+die behandlung von mehrdeutigen verben in der maschinellen übersetzung
+untersuchung zur verteilten produktionsplanung mit methoden der logischen programmierung
+stepwise software development with algebraic specifications
+types, modules and databases in the logic programming language protos-l
+the knowledge representation language l
+eine prolog-theorie für zeitliche beziehungen zwischen ereignissen
+the stuttgart type unification formalism - user manual
+lokale verben und präpositionen: semantische und konzeptuelle verarbeitung in leu ii
+ilfa interface concept
+transactions and consistency in distributed database systems.
+knowledge representation in lilog
+a logical operational semantics of full prolog part iii: built-in predicates for files, terms, arithmetic and input-output
+using knowledge-based methods to administrate an access control system
+zur verarbeitung von lokalisierungsausdrücken in einem hybriden system
+integration von constraints in die l
+mentale bilder und wegbedeutungen
+pluralbehandlung in natürlichsprachlichen wissensverabeitungssystemen
+an order-sorted logic for knowledge representation systems
+incremental vocabulary extensions in text understanding systems
+persistence and justified causation: some remarks on nonmonotonic temporal reasoning
+database support for the protos-l system
+anaphora resolution for machine translation: a study
+koordination von nichtverbalen satzkonstituenten
+the design and implementation of tlprolog (v. 2.0) - intermediate report
+a conceptual model for time
+standards für das programmieren in prolog für lilog, version 1.0
+qualitätssicherung durch programmverifikation und algebraische methoden in der softwareentwicklung
+feature graphs and abstract data types: a unifying approach
+the many-valued theorem prover 
+rekonstruktion von hintergrundwissen für ein wissensbasiertes textverstehendes system
+a feature logic with subsorts
+draft report of the logic programming language protos-l
+efta: an algebra for deductive retrieval of feature terms
+efta query processing in lilog-db
+a polynomial method for finding irregularities in large example sets
+compilation of complex datalog with stratified negation
+interaktion von propositionalen und bildhaften repräsentationen
+an order sorted predicate logic with closely coupled taxonomic information
+xrm - an extended (n-ary) relational memory.
+representation and reasoning with attributive descriptions
+untersuchungen zum grundwortschatz
+ein modularer ansatz für prinzipienbasiertes parsing
+quantifikation, plural, ereignisse und ihre argumente in einer mehrsortigen sprache der prädikatenlogik erster stufe
+oskar - a prolog programm for modelling dimensional designation and positional variation of objects in space
+extending the warren abstract machine to polymorphic order-sorted resolution
+textunderstanding in lilog - sorts and reference objects
+sql/data system, conpects and facilities.
+derivationsmorphologie in einem übersetzungssystem
+prozedurale aspekte der wegplanung und wegbeschreibung
+projekt "elektronische wörterbücher/lexika": abschlußbericht der definitionsphase
+fll: a first-order language for deductive retrieval of feature terms
+resolution with feature unification
+das problem der vp-ellipsen im rahmen einer theorie der sachverhaltsanaphern
+erster except-workshop: computerunterstützte umweltverträglichkeitsprüfung
+konzeptuelles design einer mehrsprachigen lexikalischen datenbank für die maschinelle übersetzung
+a calculus for order-sorted predicate logic with sort literals
+persistente datenspeicherung in einer logischen programmiersprache mit relationalen und deduktiven datenbanken
+integration eines deduktiven datenbanksystems in eine logikprogrammiersprache
+on subsumption and semiunifaction in feature algebras
+a knowledge level analysis of belief revision
+an effective representation of complex clauses in a relational database
+prolog and natural language processing
+an anaphora resolution procedure for machine translation
+natural language understanding in lilog: an intermediate overview
+verarbeitung von vagheits- und unsicherheitsbewertungen: tools für das testen von ansätzen für die unifikation und die logikbehandlung von mit unsicherheit und vagheit bewerteten graphen im l-lilog-stuf-graphenkonzept
+modeling structured open worlds in a database system: the fll-approach
+integrating a deductive database system with a warren abstract machine
+ein neuer ansatz zur integration unterschiedlicher lexikalischer resourcen
+expressing linguistic knowledge in stuf '91
+zeit und aspekt bei der verarbeitung natürlicher sprachen
+spezifikation eines theorembeweisers für dreiwertige first-order logik.
+über die w's der textgenerierung: was, wofür, wo und wie: wissensbasierte generierung von informierenden texten in einem auskunftssystem
+integrating model theoretic and proof theoretic interpretation of logic programs
+thor - a system for computing in equational theories
+syntactic processing of unknown words
+verträglichkeitsprüfungen für die verarbeitung räumlichen wissens
+mathematische grundlagen der formalen linguistik - ein kompendium
+a tool kit for knowledge based production planning systems
+wortbedeutungen und lexikalische repräsentationen
+semantische repräsentation von plural-phänomenen
+results on non-monotonic logics.
+modelling spatial knowledge on a linguistic basis
+modularizing knowledge in lilog
+rule rewriting techniken zur globalen optimierung von fll-programmen
+variable subkategorisierung: eine theorie unpersönlicher einbettungen im deutschen
+presupposition, anaphora, and lexical content.
+development and programming of deductive databases with protos-l
+a shared segment and interprocess communication facility for vm/370
+icl - an integrity control language: konzeption und implementierung einer formalen sprache zur integritätskontrolle von wissensbasen
+the algebra of feature graph specifications
+sql/data system, general information manual.
+a persistent store for large shared knowledge bases
+representation and accessibility of discourse referents
+gebietskonstituierende prozesse
+slide search.
+complexity of logical decision problems: an introduction
+weiterentwicklung des earley-algorithmus für kontextfreie und id/lp-grammatiken
+terminological reasoning is inherently intractable
+graph based extension of the lilog inference engine
+verarbeitung natürlicher sprache
+a model for discourse particles
+chart-parsing of unification-based grammars with id/lp-rules
+transitive closure: new aspects of an old theme
+on structuring domain-specific knowledge
+die sloppy/referenzielle ambiguität: bildungssyntax oder diskursrepräsentationstheorie?
+standards für das programmieren in prolog für lilog, version 3.3
+lilog prototype i grammar documentation: semantics
+datenbankkonzepte für wissensbasierte systeme
+using a structured english query language as a data definition facility.
+the compilation of a high level data language.
+ein lernverfahren für den automatischen erwerb von kontrollwissen
+stability analysis of wireless networks
+finding scientific papers with hpsearch and mops
+a modified mesh independence principle of newton's method
+visbdd - a webbased visualization framework for obdd algorithms
+on boolean vs. modular arithmetic for circuits and communication protocols
+a parametric view to the mangasarian-fromovitz constraint qualification
+a decomposition method in nonconvex mixed-integer programming
+trust region methods for solving the optimal output feedback design problem
+a decomposition method using duality bounds for nonconvex optimization
+nonuniform grids for reduced basis design of low order feedback controllers for nonlinear continuous systems
+approximation of the newton step by a defect correction process
+polytope containment and determination by linear probes
+on markovian spatial arrival processes for the performance analysis of mobile communication networks
+convolution algorithms for bmap/g/1-queues
+tele-task - teleteaching anywhere solution kit
+a qqp-minimization method for semidefinite and smooth nonconvex programs
+18. workshop über komplexitätstheorie, effiziente algorithmen und datenstrukturen, universität trier, 20. oktober 1992 (abstracts)
+on the complexity of constructing optimal obdd's
+numerical solution of control problems under uncertainty and perturbation of input data with applications in finance
+structured psb-update for optimal shape design problems
+räumliche markov-additive prozesse und bedienstationen ohne warteraum
+fast generation of random permutations via networks simulation
+approximation results for wavelength routing in directed binary trees
+condensing tensor product modules
+a comparison of numerical methods for optimal shape design problems
+interprocedural analysis based on pdas
+scheduling of conditional executed jobs
+mod-2-obdd's: a generalization of obdd's and exor-sum-of-products
+a heuristic for (+)-obdd minimization
+complete families of invariant distributions
+numerical solution of a semilinear parabolic control problem
+structural gröbner basis detection
+a fast and robust algorithm for a class of generalized fractional programs
+do we really need common variable orders for synthesizing obdds?
+lagrange-duality and partitioning techniques in nonconvex global optimization
+two program comprehension tools for automatic parallelization: a comparative study
+implement role-based access control with attribute certificates
+convergence of time-continous disturbed martingales and financial market modelling
+approximate analysis of multi-queue stations with 1-limited service
+circuit and decision tree complexity of some number theoretic problems
+a decomposition algorithm for optimization over efficient sets
+scheduling expression dags for minimal register need
+on the queue-length-distributions of the e
+on generic one-parametric semi-infinite optimization
+a branch-and-bound decomposition approach for solving quasiconvex-concave programs
+approximating semi-markov processes by maps, with an application on queueing theory
+newton's method for a class of optimal shape design problems
+a generic background dissemination service for mobile ad-hoc networks
+complexity results for the optimum cost chromatic partition problem
+personal name matching: new test collections and a social network based approach.
+utility function programs and optimization over the efficient set in multiple objective decision making
+on local convex majorizing approximations of generalized semi-infinite programming problems
+structured quasi-newton methods for optimization problems in hilbert space
+computation of pods for fluid flows with lanczos methods
+unambiguity of smgl content models - pushdown automata revisited
+global optimization techniques for solving the general quadratic integer programming problem
+ordered binary decision diagrams in electronic design automation
+simultaneous pseudo-timestepping for pde-model based optimization problems
+mod-p decision diagrams: a data structure for multiple-valued functions.
+on the numerical simulation of bingham fluid flows using prox-regularization
+zur strukturellen stabilität von kommunikationssystemen - eine kurze einführung in die grundlagen
+increasing efficiency of symbolic model checking by accelerating dynamic variable reordering
+customer motion in queueing models: the use of tangent vector fields
+external tangents and closedness of cone + subspace
+block-restricted reordering - extended experiments
+on graph models for communicating mobiles in access areas
+on the reconstruction of binary images from their discrete radon transforms
+on the complexity of some basic problems in computational convexity: 1. containment problems
+linearly constrained global minimization of functions with concave minorants
+stochastic simulation of markov modulated finite-source queues
+complexity classes with finite acceptance types
+www.bdd-portal.org: an experimentation platform for binary decision diagram algorithms
+neue ergebnisse für bmaps und räumliche warteschlangen
+stochastic modeling of server capacity utilization by geometric sums
+tele-task - teleteaching praxistauglich für den universitätsalltag
+polytope projection and projection polytopes
+proximal methods in view of interior-point-strategies
+some heuristics for generating tree-like fbdd types
+propagating differences: an efficient new fixpoint algorithm for distributive constraint systems
+global convergence of inexact reduced sqp methods
+scheduling of virtual connections in fast networks
+a lmi-based algorithm for designing suboptimal static h
+discrete tomography: determination of finite sets by x-rays
+on markov-additive jump processes
+determination of socle series using the condensation method
+minkowski addition of polytopes: computational complexity and applications to gröbner bases
+succinct solvers
+interior proximal method for variational inequalities: case of non-paramonotone operators
+an optimal greedy algorithm for wavelength allocation in directed tree networks
+on product connection theorems for markov chains
+the www meets eda: usability evaluation of obdd-heuristics via the internet
+a decomposition approach for the global minimization of biconcave functions over polytopes
+optimal control of thermally coupled navier-stokes equations in food industry
+application driven variable reordering and an example in reachability analysis
+convergent outer approximation algorithms for solving unary problems
+linear sifting of decision diagrams
+a branch and bound approach for solving a class of generalized semi-infinite programming problems
+approximation results for the optimum cost chromatic partition problem
+convergence results on proximal method of multipliers in nonconvex programming
+on the complexity of tensor formulae
+an em algorithm for platoon arrival processes in discrete time
+on the solution of a two ball trust region subproblem
+on multiplicative structure in quasi-newton methods for nonlinear equations
+state encodings and obdd-sizes
+functional quantization and small ball probabilities for gaussian processes
+parallel versus sequential task-processing: a new performance model in discrete time
+on the g/ge/1 queue
+generalized semi-infinite optimization: a first order optimality condition and examples
+on a weak norm based prox-regularization method
+one strike against the min-max degree triangulation problem
+10 jahre eccc - eine digitale bibliothek in weltweiter benutzung
+locating matches of tree patterns in forests
+convergence of generalized supermartingales with continous parameter
+proximal interior point approach for solving convex semi-infinite programming problems
+a note on spectral lower bound arguments for decision trees
+optimal allocation of jobs between heterogeneous servers in the retrial map/ph/k queue
+scheduling with incompatible jobs
+the bmap/g/1 queue with level dependent arrivals and its stationary distribution
+stochastic constraint aggregation method for convex semi-infinite problems
+a lagrangian method for solving the optimal output feedback design problem
+upper and lower bounds for certain graph-accessability-problems on bounded alternating (omega)-branching programs
+efficient obdd-based boolean manipulation in cad beyond current limits
+forward and inverse problems in modeling of multiphase flow and transport through heterogeneos porous media
+on the rareness of disturbed martingales in the class of all uniformly l
+a tool for simulation of markov modulated finite-source queueing systems
+symmetric functions in ac
+on the algorithmic complexity of minkowski's reconstruction theorem
+integrating synchronous and asynchronous paradigms: the fork95 parallel programming language
+algorithmic considerations for +-obdd reordering.
+model-checking for l
+auxiliary problem principle and proximal point methods
+largest j-simplices in n-polytopes
+the complexity of detecting crossingfree configurations in the plane
+the infinite server queue with markov additive arrivals in space
+weak error tolerance criterion in generalized proximal methods
+modular partitioning for improvement of image computation
+a rainbow about t-colorings for complete graphs
+convergence rate of the augmented lagrangian sqp method
+integrating scalable parallel libraries and automatically parallelizing compilers
+generalized coloring for tree-like graphs
+reduction of generalized semi-infinite programming problems to semi-infinite or piece-wise smooth programming problems
+proximal interior point approach in convex programming
+numerical parameter identification in non-isothermal multiphase multicomponent flow through porous media
+regularized penalty method for parabolic optimal control problems
+on the acceptance power of groups and semigroups
+a unifying theoretical background for some bdd-based data structures
+non-quadratic proximal regularization with application to variational inequalities in hilbert spaces
+on communication games with more than two players
+ti-jpacs - eine frei verfügbare leistungsfähige plattform zur medizinischen bildverarbeitung und -visualisierung
+computational design of optimal output feedback controllers
+one step further: integrating electronic submission and the reviewing process
+efficient analysis and manipulation of obdds can be extended to read-once-only branching programs
+performance analysis of sdn specific error procedures: comparison of step-by-step and end-to-end schemes
+reduction of some optimal control problems with variational inequalities to ill-posed optimal control problems with linear state equations
+on approximate solution methods for multi-queue systems with 1-limited deterministic service
+global rebuilding of obdd's - tunneling memory requirement maxima
+on the use of product structure in secant methods for nonlinear least squares problems
+ein newtonverfahren zur zeitoptimalen vibrationsdämpfung
+product form solutions for closed synchronized systems of stochastic sequential processes
+convergence results on proximal method of multipliers in nonconvex programming
+optimal static output feedback design by using a trust region interior point method
+the sparamat approach to automatic comprehension of sparse matrix computations
+no-waiting stations with special arrival processes and customer motion
+ein faltungskalkül für matrizenfolgen und verallgemeinerte poisson-gruppenprozesse
+proximal methods: decomposition and selection

@@ -1,5 +1,5 @@
 import spacy
-spacy.require_gpu()
+# spacy.require_gpu()
 from spacy.matcher import Matcher
 from spacy.matcher import PhraseMatcher
 from spacy.tokenizer import Tokenizer
@@ -52,7 +52,7 @@ def partition(file, size = 1000000):
         if not data:
             break
         yield data
-        
+
 
 def getPhrases(file, context_pattern):
     new_phrases = set()
