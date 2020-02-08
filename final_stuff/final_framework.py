@@ -258,8 +258,10 @@ if (__name__ == "__main__"):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
     if (scoring_mode < 0 or scoring_mode > 4):
-        print("\nScoring Mode is incorrect! Please retry.")
+        print("\nScoring Mode is incorrect! Please retry.\n")
         sys.exit()
+
+    print("\n[LOG]: Started run for scoring method " + str(scoring_mode) + "\n")
 
     lower_filename = filename[:-4] + "_lower.txt"
 
@@ -293,3 +295,4 @@ if (__name__ == "__main__"):
         f.write(str(final_keywords_list))
 
     remove(lower_filename)
+    print("\n[LOG]: Ended run for scoring method +" + str(scoring_mode) + "\n")
