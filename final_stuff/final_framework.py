@@ -76,7 +76,7 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
 
     return l1, l2, l3, l4, m1, m2, m3, m4
 
-def patternSearch(T_0, T, file):
+def patternSearch(T_0, T, file, scoring_mode):
     current_patterns = [nlp(x) for x in T]
     phrase_matcher = PhraseMatcher(nlp.vocab)
     phrase_matcher.add('pattern search', None, *current_patterns)
@@ -152,10 +152,22 @@ def patternSearch(T_0, T, file):
     for i in range(len(unranked_patterns)):
         recall = m2[i]
         precision = m1[i]
-        if (recall + precision) == 0:
-            fscore = 0
+        fscore = 0
+        if scoring_mode == 0:
+            if (recall + precision) == 0:
+                fscore = 0
+            else:
+                fscore = ((2 * recall * precision) / (recall + precision))
+        elif scoring_mode == 1:
+            fscore = precision
+        elif scoring_mode == 2:
+            fscore = recall
+        elif scoring_mode == 3:
+            fscore = precision * recall
+        elif scoring_mode == 4:
+            fscore = precision + recall
         else:
-            fscore = ((2 * recall * precision) / (recall + precision))
+            fscore = -100
         pattern2fscore[i] = fscore
     sorted_patterns_ids = sorted(pattern2fscore, key=pattern2fscore.__getitem__, reverse=True)
     sorted_patterns = [unranked_patterns[i] for i in sorted_patterns_ids]
@@ -184,7 +196,7 @@ def patternSearch(T_0, T, file):
 
     return sorted_patterns
 
-def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords):
+def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords, scoring_mode):
 
     sorted_patterns = sorted_patterns[0:k_depth_patterns]
     unranked_phrases = list(getPhrases(file, sorted_patterns))
@@ -200,10 +212,22 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords)
     for i in range(len(unranked_phrases)):
         recall = m4[i]
         precision = m3[i]
-        if (recall + precision) == 0:
-            fscore = 0
+        fscore = 0
+        if scoring_mode == 0:
+            if (recall + precision) == 0:
+                fscore = 0
+            else:
+                fscore = ((2 * recall * precision) / (recall + precision))
+        elif scoring_mode == 1:
+            fscore = precision
+        elif scoring_mode == 2:
+            fscore = recall
+        elif scoring_mode == 3:
+            fscore = precision * recall
+        elif scoring_mode == 4:
+            fscore = precision + recall
         else:
-            fscore = ((2 * recall * precision) / (recall + precision))
+            fscore = -100
         phrase2fscore[i] = fscore
     sorted_phrases_ids = sorted(phrase2fscore, key=phrase2fscore.__getitem__, reverse=True)
     sorted_phrases = [unranked_phrases[i] for i in sorted_phrases_ids]
@@ -225,12 +249,16 @@ if (__name__ == "__main__"):
     k_depth_patterns = int(sys.argv[2]) # 100
     k_depth_keywords = int(sys.argv[3]) # 500
     results_filename = "./outputs/" + sys.argv[4] # "./outputs/" + "results_small.txt"
+    scoring_mode = int(sys.argv[5]) # 0 or 1 or 2 or 3 or 4
 
     if (path.exists(filename) == False):
         print("\nWarning: the data file does not exist!\n")
         sys.exit()
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
+        sys.exit()
+    if (scoring_mode < 0 or scoring_mode > 4):
+        print("\nScoring Mode is incorrect! Please retry.")
         sys.exit()
 
     lower_filename = filename[:-4] + "_lower.txt"
@@ -247,12 +275,12 @@ if (__name__ == "__main__"):
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
             print("Iteration " + str(i+1) + "...\n")
-            sorted_patterns = patternSearch(seed, keywords, lower_filename)
+            sorted_patterns = patternSearch(seed, keywords, lower_filename, scoring_mode)
             f.write("\nSorted Patterns:\n")
             for pattern in sorted_patterns[0:k_depth_patterns]:
                 f.write(str(pattern))
                 f.write("\n")
-            sorted_keywords, iter_keyword2fscore = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords)
+            sorted_keywords, iter_keyword2fscore = tuple_search(seed, sorted_patterns, lower_filename, k_depth_patterns, k_depth_keywords, scoring_mode)
             f.write("Sorted Keywords:\n")
             f.write(str(sorted_keywords))
             keywords = keywords.union(sorted_keywords)
