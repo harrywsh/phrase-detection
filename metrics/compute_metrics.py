@@ -78,4 +78,9 @@ def get_precision(words_set, mode, good=None, probably_good=None):
     precision = ((len(good) + len(probably_good)) / len(words_set)) * 100.0
     return precision, good, probably_good
 
-
+def get_recall(prdr_good_set, ap_good_set):
+    if prdr_good_set is None or ap_good_set is None:
+        return None
+    prdr_recall = (len(prdr_good_set))/(len(prdr_good_set.union(ap_good_set))) * 100.0
+    ap_recall = (len(prdr_good_set))/(len(prdr_good_set.union(ap_good_set))) * 100.0
+    return [prdr_recall, ap_recall]
