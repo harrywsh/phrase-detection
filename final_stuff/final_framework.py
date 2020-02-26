@@ -234,20 +234,20 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
     expanded_eid_pre = [unranked_phrases[i] for i in l3]
     expanded_eid_rec = [unranked_phrases[i] for i in l4]
 
-    # # Debugging
-    # max_val4 = max([val for key, val in m4.items()])
+    # # # Debugging
+    # # max_val4 = max([val for key, val in m4.items()])
+    # # for key, val in m4.items():
+    # #     m4[key] = val/max_val4
+    # print("\nRecall Graph:\n")
     # for key, val in m4.items():
-    #     m4[key] = val/max_val4
-    print("\nRecall Graph:\n")
-    for key, val in m4.items():
-        print(unranked_phrases[key] + " -> " + str(val))
-    # #
-    # # max_val3 = max([val for key, val in m3.items()])
-    # # for key, val in m3.items():
-    # #     m3[key] = val/max_val3
-    print("\nPrecision Graph:\n")
-    for key, val in m3.items():
-        print(unranked_phrases[key] + " -> " + str(val))
+    #     print(unranked_phrases[key] + " -> " + str(val))
+    # # #
+    # # # max_val3 = max([val for key, val in m3.items()])
+    # # # for key, val in m3.items():
+    # # #     m3[key] = val/max_val3
+    # print("\nPrecision Graph:\n")
+    # for key, val in m3.items():
+    #     print(unranked_phrases[key] + " -> " + str(val))
 
     phrase2fscore = {}
     for i in range(len(unranked_phrases)):
