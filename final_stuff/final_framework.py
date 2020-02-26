@@ -66,9 +66,20 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
                     pattern2ids[i].add(j)
                 matcher.remove("extraction")
 
+    id2sup = {}
+    pattern2sup = {}
 
-    id2sup = {key:len(val) for key, val in id2patterns.items()}
-    pattern2sup = {key:len(val) for key, val in pattern2ids.items()}
+    for id in id2patterns.keys():
+        sum = 0
+        for col in range(len(unranked_patterns)):
+            sum += context_matrix[id, col]
+        id2sup[id] = sum
+
+    for pattern in pattern2ids.keys():
+        sum = 0
+        for row in range(len(unranked_phrases)):
+            sum += context_matrix[row, pattern]
+        pattern2sup[pattern] = sum
 
     l1, l2, l3, l4, m1, m2, m3, m4 = prDualRank(seedIdwConfidence, [], id2patterns, pattern2ids, {},
              {}, {}, {}, id2phrase, context_matrix.tolist(), id2sup, pattern2sup,
@@ -148,6 +159,21 @@ def patternSearch(T_0, T, file, scoring_mode):
     expanded_eid_pre = [unranked_phrases[i] for i in l3]
     expanded_eid_rec = [unranked_phrases[i] for i in l4]
 
+    # # # Debugging
+    # # max_val4 = max([val for key, val in m4.items()])
+    # # for key, val in m4.items():
+    # #     m4[key] = val/max_val4
+    # print("\nRecall Graph:\n")
+    # for key, val in m2.items():
+    #     print(str(unranked_patterns[key]) + " -> " + str(val))
+    # #
+    # # max_val3 = max([val for key, val in m3.items()])
+    # # for key, val in m3.items():
+    # #     m3[key] = val/max_val3
+    # print("\nPrecision Graph:\n")
+    # for key, val in m1.items():
+    #     print(str(unranked_patterns[key]) + " -> " + str(val))
+
     pattern2fscore = {}
     for i in range(len(unranked_patterns)):
         recall = m2[i]
@@ -207,6 +233,21 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
     expanded_pattern_rec = [sorted_patterns[i] for i in l2]
     expanded_eid_pre = [unranked_phrases[i] for i in l3]
     expanded_eid_rec = [unranked_phrases[i] for i in l4]
+
+    # # Debugging
+    # max_val4 = max([val for key, val in m4.items()])
+    # for key, val in m4.items():
+    #     m4[key] = val/max_val4
+    print("\nRecall Graph:\n")
+    for key, val in m4.items():
+        print(unranked_phrases[key] + " -> " + str(val))
+    # #
+    # # max_val3 = max([val for key, val in m3.items()])
+    # # for key, val in m3.items():
+    # #     m3[key] = val/max_val3
+    print("\nPrecision Graph:\n")
+    for key, val in m3.items():
+        print(unranked_phrases[key] + " -> " + str(val))
 
     phrase2fscore = {}
     for i in range(len(unranked_phrases)):
