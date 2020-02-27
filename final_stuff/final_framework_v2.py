@@ -240,7 +240,7 @@ if (__name__ == "__main__"):
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
-    if (scoring_mode < 0 or scoring_mode > 4):
+    if (scoring_mode < 0 or scoring_mode > 7):
         print("\nScoring Mode is incorrect! Please retry.\n")
         sys.exit()
 
@@ -267,7 +267,7 @@ if (__name__ == "__main__"):
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
             print("Iteration " + str(i+1) + "...\n")
-            sorted_patterns = patternSearch(seed, keywords, lower_filename, scoring_mode)
+            sorted_patterns = patternSearch(seed, keywords, lower_filename, 0)
             f.write("\nSorted Patterns:\n")
             for pattern in sorted_patterns[0:k_depth_patterns]:
                 f.write(str(pattern))
