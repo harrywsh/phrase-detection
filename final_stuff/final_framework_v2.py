@@ -25,6 +25,8 @@ from prdualrank import prDualRank
 from extractor_helpers import *
 from wiki_score import *
 
+wiki_score_cache = {}
+
 def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
 
     phrase2id = {}
@@ -71,8 +73,20 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
                 matcher.remove("extraction")
 
 
-    id2sup = {key:len(val) for key, val in id2patterns.items()}
-    pattern2sup = {key:len(val) for key, val in pattern2ids.items()}
+    id2sup = {}
+    pattern2sup = {}
+
+    for id in id2patterns.keys():
+        sum = 0
+        for col in range(len(unranked_patterns)):
+            sum += context_matrix[id, col]
+        id2sup[id] = sum
+
+    for pattern in pattern2ids.keys():
+        sum = 0
+        for row in range(len(unranked_phrases)):
+            sum += context_matrix[row, pattern]
+        pattern2sup[pattern] = sum
 
     l1, l2, l3, l4, m1, m2, m3, m4 = prDualRank(seedIdwConfidence, [], id2patterns, pattern2ids, {},
              {}, {}, {}, id2phrase, context_matrix.tolist(), id2sup, pattern2sup,
@@ -118,33 +132,6 @@ def patternSearch(T_0, T, file, scoring_mode):
                     unranked_patterns.append(tmp)
     unranked_phrases = list(getPhrases(file, unranked_patterns))
 
-# -------- Graph Generating Code --------
-#     # build context graph
-#     context_graph = nx.Graph()
-#     # add tuples and patterns into graph
-#     for i in range(len(unranked_phrases)):
-#         node = 't' + str(i)
-#         context_graph.add_node(node, pos=(0, i))
-#     for i in range(len(unranked_patterns)):
-#         node = 'p' + str(i)
-#         context_graph.add_node(node, pos=(2, i))
-
-#     context_matrix = np.zeros((len(unranked_phrases), len(unranked_patterns)))
-#     # find c (t, p)
-#     with open(file, 'r') as f:
-#         t = f.read().lower()
-#         matcher = Matcher(nlp.vocab)
-#         doc = nlp(t)
-#         for i in range(len(unranked_patterns)):
-#             matcher.add("extraction", None, unranked_patterns[i])
-#             matches = matcher(doc)
-#             for match_id, start, end in matches:
-#                 span = doc[start+2:end].text
-#                 j = unranked_phrases.index(span)
-#                 context_matrix[j, i] += 1
-#             matcher.remove("extraction")
-# -------- Graph Generating Code --------
-
     l1, l2, l3, l4, m1, m2, m3, m4 = run_prdualrank(T_0, unranked_patterns, unranked_phrases, file)
 
     expanded_pattern_pre = [unranked_patterns[i] for i in l1]
@@ -176,31 +163,11 @@ def patternSearch(T_0, T, file, scoring_mode):
     sorted_patterns_ids = sorted(pattern2fscore, key=pattern2fscore.__getitem__, reverse=True)
     sorted_patterns = [unranked_patterns[i] for i in sorted_patterns_ids]
 
-# -------- Graph Generating Code --------
-# add context nodes into graph
-
-#     c_count = 0
-#     for i in range(context_matrix.shape[0]):
-#         for j in range(context_matrix.shape[1]):
-#             if context_matrix[i, j] != 0:
-#                 occur = context_matrix[i, j]
-#                 node_t = 't' + str(i)
-#                 node_p = 'p' + str(j)
-#                 node_c = 'c' + str(c_count)
-#                 c_count += 1
-#                 context_graph.add_node(node_c, pos=(1, c_count))
-#                 context_graph.add_edge(node_t, node_c, weight=occur)
-#                 context_graph.add_edge(node_c, node_p, weight=occur)
-# draw context graph
-#     pos=nx.get_node_attributes(context_graph,'pos')
-#     nx.draw(context_graph, pos, with_labels=True)
-#     labels = nx.get_edge_attributes(context_graph, 'weight')
-#     nx.draw_networkx_edge_labels(context_graph,pos,edge_labels=labels)
-# # -------- Graph Generating Code --------
-
     return sorted_patterns
 
 def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords, scoring_mode, wiki_wiki, cs_categories):
+
+    global wiki_score_cache
 
     sorted_patterns = sorted_patterns[0:k_depth_patterns]
     unranked_phrases = list(getPhrases(file, sorted_patterns))
@@ -216,12 +183,12 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
     for i in range(len(unranked_phrases)):
         recall = m4[i]
         precision = m3[i]
-        fscore = 0
+        fscore = 0.0
+        f1 = 0.0
+        if (recall + precision) != 0.0:
+            f1 = ((2 * recall * precision) / (recall + precision))
         if scoring_mode == 0:
-            if (recall + precision) == 0:
-                fscore = 0
-            else:
-                fscore = ((2 * recall * precision) / (recall + precision))
+            fscore = f1
         elif scoring_mode == 1:
             fscore = precision
         elif scoring_mode == 2:
@@ -230,9 +197,21 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
             fscore = precision * recall
         elif scoring_mode == 4:
             fscore = precision + recall
+        elif scoring_mode == 5:
+            if unranked_phrases[i] not in wiki_score_cache:
+                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+            fscore = wiki_score_cache[unranked_phrases[i]]
+        elif scoring_mode == 6:
+            if unranked_phrases[i] not in wiki_score_cache:
+                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+            fscore = wiki_score_cache[unranked_phrases[i]] + f1
+        elif scoring_mode == 7:
+            if unranked_phrases[i] not in wiki_score_cache:
+                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+            fscore = wiki_score_cache[unranked_phrases[i]] + recall
         else:
             fscore = -100
-        phrase2fscore[i] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+        phrase2fscore[i] = fscore
     sorted_phrases_ids = sorted(phrase2fscore, key=phrase2fscore.__getitem__, reverse=True)
     sorted_phrases = [unranked_phrases[i] for i in sorted_phrases_ids]
 
@@ -253,7 +232,7 @@ if (__name__ == "__main__"):
     k_depth_patterns = int(sys.argv[2]) # 100
     k_depth_keywords = int(sys.argv[3]) # 500
     results_filename = "./outputs/" + sys.argv[4] # "./outputs/" + "results_small.txt"
-    scoring_mode = 2 # Set Scoring Method = Recall (for now... ) # int(sys.argv[5]) # 0 or 1 or 2 or 3 or 4
+    scoring_mode = int(sys.argv[5]) # int(sys.argv[5]) # 0 or 1 or 2 or 3 or 4
 
     if (path.exists(filename) == False):
         print("\nWarning: the data file does not exist!\n")
@@ -277,14 +256,14 @@ if (__name__ == "__main__"):
         with open(filename, "r") as fn:
             t = fn.read().lower()
             f.write(t)
-    
+
     wiki_wiki = wikipediaapi.Wikipedia('en') # generating wiki_wiki
-    
+
     cs_categories = set() # obtaining cs_categories
     with open('./data/wikipedia_reference/cs_categories.txt', 'r') as f:
         for line in f:
             cs_categories.add(line[:-1])
-        
+
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
             print("Iteration " + str(i+1) + "...\n")
