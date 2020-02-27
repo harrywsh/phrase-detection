@@ -125,54 +125,12 @@ def patternSearch(T_0, T, file, scoring_mode):
                     unranked_patterns.append(tmp)
     unranked_phrases = list(getPhrases(file, unranked_patterns))
 
-# -------- Graph Generating Code --------
-#     # build context graph
-#     context_graph = nx.Graph()
-#     # add tuples and patterns into graph
-#     for i in range(len(unranked_phrases)):
-#         node = 't' + str(i)
-#         context_graph.add_node(node, pos=(0, i))
-#     for i in range(len(unranked_patterns)):
-#         node = 'p' + str(i)
-#         context_graph.add_node(node, pos=(2, i))
-
-#     context_matrix = np.zeros((len(unranked_phrases), len(unranked_patterns)))
-#     # find c (t, p)
-#     with open(file, 'r') as f:
-#         t = f.read().lower()
-#         matcher = Matcher(nlp.vocab)
-#         doc = nlp(t)
-#         for i in range(len(unranked_patterns)):
-#             matcher.add("extraction", None, unranked_patterns[i])
-#             matches = matcher(doc)
-#             for match_id, start, end in matches:
-#                 span = doc[start+2:end].text
-#                 j = unranked_phrases.index(span)
-#                 context_matrix[j, i] += 1
-#             matcher.remove("extraction")
-# -------- Graph Generating Code --------
-
     l1, l2, l3, l4, m1, m2, m3, m4 = run_prdualrank(T_0, unranked_patterns, unranked_phrases, file)
 
     expanded_pattern_pre = [unranked_patterns[i] for i in l1]
     expanded_pattern_rec = [unranked_patterns[i] for i in l2]
     expanded_eid_pre = [unranked_phrases[i] for i in l3]
     expanded_eid_rec = [unranked_phrases[i] for i in l4]
-
-    # # # Debugging
-    # # max_val4 = max([val for key, val in m4.items()])
-    # # for key, val in m4.items():
-    # #     m4[key] = val/max_val4
-    # print("\nRecall Graph:\n")
-    # for key, val in m2.items():
-    #     print(str(unranked_patterns[key]) + " -> " + str(val))
-    # #
-    # # max_val3 = max([val for key, val in m3.items()])
-    # # for key, val in m3.items():
-    # #     m3[key] = val/max_val3
-    # print("\nPrecision Graph:\n")
-    # for key, val in m1.items():
-    #     print(str(unranked_patterns[key]) + " -> " + str(val))
 
     pattern2fscore = {}
     for i in range(len(unranked_patterns)):
@@ -198,28 +156,6 @@ def patternSearch(T_0, T, file, scoring_mode):
     sorted_patterns_ids = sorted(pattern2fscore, key=pattern2fscore.__getitem__, reverse=True)
     sorted_patterns = [unranked_patterns[i] for i in sorted_patterns_ids]
 
-# -------- Graph Generating Code --------
-# add context nodes into graph
-
-#     c_count = 0
-#     for i in range(context_matrix.shape[0]):
-#         for j in range(context_matrix.shape[1]):
-#             if context_matrix[i, j] != 0:
-#                 occur = context_matrix[i, j]
-#                 node_t = 't' + str(i)
-#                 node_p = 'p' + str(j)
-#                 node_c = 'c' + str(c_count)
-#                 c_count += 1
-#                 context_graph.add_node(node_c, pos=(1, c_count))
-#                 context_graph.add_edge(node_t, node_c, weight=occur)
-#                 context_graph.add_edge(node_c, node_p, weight=occur)
-# draw context graph
-#     pos=nx.get_node_attributes(context_graph,'pos')
-#     nx.draw(context_graph, pos, with_labels=True)
-#     labels = nx.get_edge_attributes(context_graph, 'weight')
-#     nx.draw_networkx_edge_labels(context_graph,pos,edge_labels=labels)
-# # -------- Graph Generating Code --------
-
     return sorted_patterns
 
 def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords, scoring_mode):
@@ -233,21 +169,6 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
     expanded_pattern_rec = [sorted_patterns[i] for i in l2]
     expanded_eid_pre = [unranked_phrases[i] for i in l3]
     expanded_eid_rec = [unranked_phrases[i] for i in l4]
-
-    # # # Debugging
-    # # max_val4 = max([val for key, val in m4.items()])
-    # # for key, val in m4.items():
-    # #     m4[key] = val/max_val4
-    # print("\nRecall Graph:\n")
-    # for key, val in m4.items():
-    #     print(unranked_phrases[key] + " -> " + str(val))
-    # # #
-    # # # max_val3 = max([val for key, val in m3.items()])
-    # # # for key, val in m3.items():
-    # # #     m3[key] = val/max_val3
-    # print("\nPrecision Graph:\n")
-    # for key, val in m3.items():
-    #     print(unranked_phrases[key] + " -> " + str(val))
 
     phrase2fscore = {}
     for i in range(len(unranked_phrases)):
