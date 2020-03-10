@@ -25,7 +25,19 @@ from prdualrank import prDualRank
 from extractor_helpers import *
 from wiki_score import *
 
+import re
+import nltk
+from nltk.corpus import stopwords
+from collections import defaultdict
+
+phrase_seg_score = {}
+removed_phrases = set()
 wiki_score_cache = {}
+
+def get_seg_score(candidate_phrase):
+    if candidate_phrase in set(phrase_seg_score.keys()).difference(removed_phrases):
+        return phrase_seg_score[candidate_phrase]
+    return 0.01926643 # 1/2 of avg seg_score in the file
 
 def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
 
@@ -209,6 +221,14 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
             if unranked_phrases[i] not in wiki_score_cache:
                 wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
             fscore = wiki_score_cache[unranked_phrases[i]] + recall
+        elif scoring_mode == 8:
+            if unranked_phrases[i] not in wiki_score_cache:
+                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)
+        elif scoring_mode == 9:
+            if unranked_phrases[i] not in wiki_score_cache:
+                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+            fscore = 0.65 * (2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)) + 0.35 * get_seg_score(unranked_phrases[i])
         else:
             fscore = -100
         phrase2fscore[i] = fscore
@@ -240,7 +260,7 @@ if (__name__ == "__main__"):
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
-    if (scoring_mode < 0 or scoring_mode > 7):
+    if (scoring_mode < 0 or scoring_mode > 10):
         print("\nScoring Mode is incorrect! Please retry.\n")
         sys.exit()
 
@@ -250,7 +270,7 @@ if (__name__ == "__main__"):
 
     keyword2fscore = {}
     for seed_word in seed:
-        keyword2fscore[seed_word] = 1.0
+        keyword2fscore[seed_word] = 100
 
     with open(lower_filename, "w+") as f:
         with open(filename, "r") as fn:
@@ -263,6 +283,26 @@ if (__name__ == "__main__"):
     with open('./data/wikipedia_reference/cs_categories.txt', 'r') as f:
         for line in f:
             cs_categories.add(line[:-1])
+
+    # Data regarding Phrase Segmentation Scores
+    phrase_seg_score = defaultdict(float)
+    with open('./data/segmentation_multi_words_0_1.txt', 'r') as f:
+        lines = f.readlines()
+        for line in lines:
+            for phrase in (re.findall(re.compile(r"<phrase>(.+?)</phrase>", re.I|re.S), line.strip())):
+                phrase_seg_score[phrase] += 1
+
+    max_seg_score = 0
+    for key, val in phrase_seg_score.items():
+        max_seg_score = max(max_seg_score, phrase_seg_score[key])
+
+    for key, val in phrase_seg_score.items():
+        phrase_seg_score[key] = val/max_seg_score
+
+    for stopwd in set(stopwords.words('english')):
+        for wd in phrase_seg_score.keys():
+            if stopwd in wd.split(' '):
+                removed_phrases.add(wd)
 
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
