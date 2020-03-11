@@ -20,6 +20,7 @@ from tqdm import tqdm
 import sys
 from os import path, remove
 import copy
+from requests import ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError
 
 from prdualrank import prDualRank
 from extractor_helpers import *
@@ -33,6 +34,7 @@ from collections import defaultdict
 phrase_seg_score = {}
 removed_phrases = set()
 wiki_score_cache = {}
+error_count = 0
 
 def get_seg_score(candidate_phrase):
     if candidate_phrase in set(phrase_seg_score.keys()).difference(removed_phrases):
@@ -227,7 +229,11 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
             fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)
         elif scoring_mode == 9:
             if unranked_phrases[i] not in wiki_score_cache:
-                wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+                try:
+                    wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+                except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
+                    wiki_score_cache[unranked_phrases[i]] = 0.5
+                    error_count += 1
             fscore = 0.65 * (2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)) + 0.35 * get_seg_score(unranked_phrases[i])
         else:
             fscore = -100
@@ -323,6 +329,8 @@ if (__name__ == "__main__"):
         final_keywords_list = [(word, keyword2fscore[word]) for word in final_keywords_set]
         f.write("Final Sorted Keywords:\n")
         f.write(str(final_keywords_list))
+        f.write("\n[LOG]: Error count: " + str(error_count) + "\n")
 
     remove(lower_filename)
+    print("\n[LOG]: Error count: " + str(error_count) + "\n")
     print("\n[LOG]: Ended run for scoring method +" + str(scoring_mode) + "\n")
