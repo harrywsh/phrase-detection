@@ -39,7 +39,7 @@ error_count = 0
 def get_seg_score(candidate_phrase):
     if candidate_phrase in set(phrase_seg_score.keys()).difference(removed_phrases):
         return phrase_seg_score[candidate_phrase]
-    return 0.01926643 # 1/2 of avg seg_score in the file
+    return 0.009633215 # 1/4 of avg seg_score in the file
 
 def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
 
@@ -230,11 +230,11 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
         elif scoring_mode == 9:
             if unranked_phrases[i] not in wiki_score_cache:
                 try:
-                    wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
+                    wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 40)
                 except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
                     wiki_score_cache[unranked_phrases[i]] = 0.5
                     error_count += 1
-            fscore = 0.65 * (2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)) + 0.35 * get_seg_score(unranked_phrases[i])
+            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1* get_seg_score(unranked_phrases[i]))
         else:
             fscore = -100
         phrase2fscore[i] = fscore
