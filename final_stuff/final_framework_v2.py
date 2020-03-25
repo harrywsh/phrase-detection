@@ -227,7 +227,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
             if unranked_phrases[i] not in wiki_score_cache:
                 wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 20)
             fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1)
-        elif scoring_mode == 9:
+        elif scoring_mode == 9: # Current Best Method
             if unranked_phrases[i] not in wiki_score_cache:
                 try:
                     wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 40)
@@ -235,6 +235,14 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
                     wiki_score_cache[unranked_phrases[i]] = 0.5
                     error_count += 1
             fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1* get_seg_score(unranked_phrases[i]))
+        elif scoring_mode == 10:
+            # if unranked_phrases[i] not in wiki_score_cache:
+            #     try:
+            #         wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 40)
+            #     except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
+            #         wiki_score_cache[unranked_phrases[i]] = 0.5
+            #         error_count += 1
+            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*get_seg_score(unranked_phrases[i]))
         else:
             fscore = -100
         phrase2fscore[i] = fscore
