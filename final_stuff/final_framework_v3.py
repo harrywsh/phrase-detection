@@ -48,9 +48,9 @@ def get_better_phrase(phrase):
     for word in words:
         short_phrase += " " + word
     short_phrase = short_phrase[1:]
-    if get_phrase_probability(short_phrase, ngram_prob_map) == 0:
+    if get_phrase_probability(short_phrase) == 0:
         return phrase
-    ratio = get_phrase_probability(phrase, ngram_prob_map) / get_phrase_probability(short_phrase, ngram_prob_map)
+    ratio = get_phrase_probability(phrase) / get_phrase_probability(short_phrase)
     if ratio >= 1:
         return phrase
     return short_phrase
@@ -59,10 +59,10 @@ def get_pmi(phrase):
     words = phrase.split(' ')
     ind_prob = 1.0
     for word in words:
-        ind_prob *= get_phrase_probability(word, ngram_prob_map)
+        ind_prob *= get_phrase_probability(word)
     if ind_prob == 0:
         return 0.0
-    ratio = (get_phrase_probability(phrase, ngram_prob_map) / ind_prob)
+    ratio = (get_phrase_probability(phrase) / ind_prob)
     return (ratio / 2.9e8) # to keep PMI < 1
 
 def get_seg_score(candidate_phrase):
@@ -305,7 +305,7 @@ if (__name__ == "__main__"):
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
-    if (scoring_mode < 0 or scoring_mode > 10):
+    if (scoring_mode < 0 or scoring_mode > 11):
         print("\nScoring Mode is incorrect! Please retry.\n")
         sys.exit()
 
