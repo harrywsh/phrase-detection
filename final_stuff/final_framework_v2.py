@@ -242,7 +242,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
             #     except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
             #         wiki_score_cache[unranked_phrases[i]] = 0.5
             #         error_count += 1
-            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*get_seg_score(unranked_phrases[i]))
+            fscore = 2.718 ** (f1*get_seg_score(unranked_phrases[i]))
         else:
             fscore = -100
         phrase2fscore[i] = fscore
