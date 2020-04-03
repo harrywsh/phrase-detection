@@ -38,32 +38,51 @@ removed_phrases = set()
 wiki_score_cache = {}
 error_count = 0
 
-def get_phrase_probability(phrase):
-    n = len(phrase.split(' '))
-    return ngram_prob_map[n - 1][phrase]
+total_ngram_counts = []
 
-def get_better_phrase(phrase):
-    words = phrase.split(' ')[1:]
-    short_phrase = ""
-    for word in words:
-        short_phrase += " " + word
-    short_phrase = short_phrase[1:]
-    if get_phrase_probability(short_phrase) == 0:
-        return phrase
-    ratio = get_phrase_probability(phrase) / get_phrase_probability(short_phrase)
-    if ratio >= 1:
-        return phrase
-    return short_phrase
+def get_count(phrase):
+    idx = len(phrase.split(" ")) - 1
+    return total_ngram_counts[idx][phrase]
 
-def get_pmi(phrase):
-    words = phrase.split(' ')
-    ind_prob = 1.0
-    for word in words:
-        ind_prob *= get_phrase_probability(word)
-    if ind_prob == 0:
-        return 0.0
-    ratio = (get_phrase_probability(phrase) / ind_prob)
-    return (ratio / 2.9e8) # to keep PMI < 1
+def get_better_phrase(three_word_phrase):
+    if len(three_word_phrase.split(" ")) < 3:
+        return three_word_phrase
+    words = three_word_phrase.split(" ")
+    if get_count(words[1] + " " + words[2]) == 0:
+        return three_word_phrase
+    prob = get_count(three_word_phrase)/get_count(words[1] + " " + words[2])
+    if prob > 0.6:
+        return three_word_phrase
+    else:
+        return (words[1] + " " + words[2])
+
+# def get_phrase_probability(phrase):
+#     n = len(phrase.split(' '))
+#     return ngram_prob_map[n - 1][phrase]
+#
+# def get_better_phrase(phrase):
+#     words = phrase.split(' ')[1:]
+#     short_phrase = ""
+#     for word in words:
+#         short_phrase += " " + word
+#     short_phrase = short_phrase[1:]
+#     if get_phrase_probability(short_phrase) == 0:
+#         return phrase
+#     ratio = get_phrase_probability(phrase) / get_phrase_probability(short_phrase)
+#     if ratio >= 1:
+#         return phrase
+#     return short_phrase
+#
+# def get_pmi(phrase):
+#     words = phrase.split(' ')
+#     ind_prob = 1.0
+#     for word in words:
+#         ind_prob *= get_phrase_probability(word)
+#     if ind_prob == 0:
+#         return 0.0
+#     ratio = (get_phrase_probability(phrase) / ind_prob)
+#     return (ratio / 2.9e8) # to keep PMI < 1
+#
 
 def get_seg_score(candidate_phrase):
     if candidate_phrase in set(phrase_seg_score.keys()).difference(removed_phrases):
@@ -274,9 +293,20 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
                     wiki_score_cache[unranked_phrases[i]] = 0.5
                     error_count += 1
             fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]] * f1 * get_seg_score(unranked_phrases[i]) * get_pmi(unranked_phrases[i]))
+        # elif scoring_mode == 12:
+        #     better_phrase = get_better_phrase(unranked_phrases[i])
+        #     if len(unranked_phrases[i].split(' ')) >= 3 and better_phrase != unranked_phrases[i]:
+        #         unranked_phrases[i] = better_phrase
+        #     if unranked_phrases[i] not in wiki_score_cache:
+        #         try:
+        #             wiki_score_cache[unranked_phrases[i]] = get_wiki_score(unranked_phrases[i], wiki_wiki, cs_categories, 40)
+        #         except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
+        #             wiki_score_cache[unranked_phrases[i]] = 0.5
+        #             error_count += 1
+        #     fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1* get_seg_score(unranked_phrases[i]))
         elif scoring_mode == 12:
             better_phrase = get_better_phrase(unranked_phrases[i])
-            if len(unranked_phrases[i].split(' ')) >= 3 and better_phrase != unranked_phrases[i]:
+            if better_phrase != unranked_phrases[i]:
                 unranked_phrases[i] = better_phrase
             if unranked_phrases[i] not in wiki_score_cache:
                 try:
@@ -284,7 +314,7 @@ def tuple_search(T_0, sorted_patterns, file, k_depth_patterns, k_depth_keywords,
                 except (ConnectTimeout, HTTPError, ReadTimeout, Timeout, ConnectionError):
                     wiki_score_cache[unranked_phrases[i]] = 0.5
                     error_count += 1
-            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1* get_seg_score(unranked_phrases[i]))
+            fscore = 2.718 ** (wiki_score_cache[unranked_phrases[i]]*f1*get_seg_score(unranked_phrases[i]))
         else:
             fscore = -100
         phrase2fscore[i] = fscore
@@ -316,7 +346,7 @@ if (__name__ == "__main__"):
     if (path.exists(results_filename) == True):
         print("\nWarning: the results file already exists! Do you really want to overwrite?\n")
         sys.exit()
-    if (scoring_mode < 0 or scoring_mode > 11):
+    if (scoring_mode < 0 or scoring_mode > 12):
         print("\nScoring Mode is incorrect! Please retry.\n")
         sys.exit()
 
@@ -365,6 +395,9 @@ if (__name__ == "__main__"):
 
     with open('./data/ngram_values.txt', 'rb') as f:
         ngram_prob_map = pickle.loads(f.read())
+
+    with open('./data/total_ngram_count.txt', 'rb') as f:
+        total_ngram_counts = pickle.loads(f.read())
 
     with open(results_filename, "w+") as f:
         for i in tqdm(range(iter_num)):
