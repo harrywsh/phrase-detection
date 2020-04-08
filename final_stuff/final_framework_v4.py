@@ -45,11 +45,15 @@ final_keywords = []
 pattern_to_score_map = {}
 keyword_to_score_map = {}
 
+# global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
+
 def get_count(phrase):
+    global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
     idx = len(phrase.split(" ")) - 1
     return total_ngram_counts[idx][phrase]
 
 def get_better_phrase(three_word_phrase):
+    global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
     if len(three_word_phrase.split(" ")) < 3:
         return three_word_phrase
     words = three_word_phrase.split(" ")
@@ -62,12 +66,13 @@ def get_better_phrase(three_word_phrase):
         return (words[1] + " " + words[2])
 
 def get_seg_score(candidate_phrase):
+    global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
     if candidate_phrase in set(phrase_seg_score.keys()).difference(removed_phrases):
         return phrase_seg_score[candidate_phrase]
     return 0.009633215 # 1/4 of avg seg_score in the file
 
 def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
-
+    global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
     phrase2id = {}
     for i in range(len(unranked_phrases)):
         phrase2id[unranked_phrases[i]] = i
@@ -139,7 +144,7 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
     return l1, l2, l3, l4, m1, m2, m3, m4
 
 def get_new_patterns_and_phrases(T_0, T, file, scoring_mode, wiki_wiki, cs_categories, max_patterns, max_keywords):
-    global final_patterns, final_keywords
+    global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
 
     current_patterns = [nlp(x) for x in T]
     phrase_matcher = PhraseMatcher(nlp.vocab)
@@ -248,7 +253,7 @@ def get_new_patterns_and_phrases(T_0, T, file, scoring_mode, wiki_wiki, cs_categ
 
 
 if (__name__ == "__main__"):
-
+    # global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
     seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "distributed database systems"])
     final_keywords = list(copy.deepcopy(seed))
     filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
