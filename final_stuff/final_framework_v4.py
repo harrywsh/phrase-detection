@@ -110,7 +110,9 @@ def run_prdualrank(T_0, unranked_patterns, unranked_phrases, file):
                 matches = matcher(doc)
                 for match_id, start, end in matches:
                     span = doc[start+offset:end].text
-                    j = unranked_phrases.index(span)
+                    j = unranked_phrases.index(span) if span in unranked_phrases else -1
+                    if j == -1:
+                        continue
                     context_matrix[j, i] += 1
                     id2patterns[j].add(i)
                     pattern2ids[i].add(j)
@@ -254,7 +256,7 @@ def get_new_patterns_and_phrases(T_0, T, file, scoring_mode, wiki_wiki, cs_categ
 
 if (__name__ == "__main__"):
     # global final_patterns, final_keywords, pattern_to_score_map, keyword_to_score_map, ngram_prob_map, phrase_seg_score, removed_phrases, wiki_score_cache, error_count, total_ngram_counts
-    seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "distributed database systems"])
+    seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "databases"])# "distributed database systems"])
     final_keywords = list(copy.deepcopy(seed))
     filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
     iter_num = 3
