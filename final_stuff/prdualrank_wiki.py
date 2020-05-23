@@ -52,7 +52,7 @@ def computeTupleRecallFromPattern(eid, extr_patterns, eidsFeatureCount, patterns
       for sg in extr_patterns:
         tmp_sum += pattern2recall.get(sg, 0) * eidsFeatureCount[eid][sg] / patterns2Sup[sg]
       wiki_precision, wiki_recall = get_ir_metrics_for_word(eid2ename[eid], wiki_ir_cache, wiki_wiki, cs_categories)
-      return 0.4 * tmp_sum + 0.6 * wiki_recall
+      return 0.4 * tmp_sum + 0.6 * 100 * wiki_recall
 
 def doInferenceRecallExtPatternOnly(extr_patterns, pattern2recall, total_eids, eid2recall,
                                     eids2Sup, eidsFeatureCount, patterns2Sup, eid2ename, wiki_ir_cache, wiki_wiki, cs_categories):
@@ -90,8 +90,8 @@ def computeTuplePrecisionFromPattern(eid, groundTruthEids, eid2precision,
       total = eids2Sup[eid]
       wiki_precision, wiki_recall = get_ir_metrics_for_word(eid2ename[eid], wiki_ir_cache, wiki_wiki, cs_categories)
       if total > 0:
-        return 0.4 * (tmp_sum / total) + 0.6 * wiki_precision
-      else: return 0.4 * 0.0 + 0.6 * wiki_precision
+        return 0.4 * (tmp_sum / total) + 0.6 * 10 * wiki_precision
+      else: return 0.4 * 0.0 + 0.6 * 10 * wiki_precision
 
 def doInferencePrecExtPatternOnly(extr_patterns, pattern2eids, eidsFeatureCount,
                                   pattern2precision, eid2precision, patterns2Sup,
