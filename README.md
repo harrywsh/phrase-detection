@@ -2,13 +2,10 @@
 Keyword detection for a particular domain, powered by the [PRDualRank](https://dl.acm.org/doi/10.1145/1935826.1935933) framework! 
 
 ## Contributors
-Work done during Fall 2019 & Spring 2020 at [FORWARD Lab](http://www.forwarddatalab.org/) @ [UIUC](https://cs.illinois.edu/), by:
-* Dipro Ray (dipror2@illinois.edu)
-* Shuhan Wang (shuhanw2@illinois.edu)
+Work done during Fall 2019, Spring 2020, Summer 2020 at [FORWARD Lab](http://www.forwarddatalab.org/) @ [UIUC](https://cs.illinois.edu/), by Dipro Ray and Shuhan Wang.
 
-## How do I run the framework?
-* Install the requirements outlined in `requirements.txt` with `pip install -r requirements.txt`. You might also have to run `python -m spacy download en_core_web_md`. 
-* Then, run `python3 ./final_stuff/final_framework.py [input_file] [max # of patterns] [max # of keywords] [output_file]`. (Note that `input_file` lives within `./final_stuff/data/`, and `output_file` lives within `./final_stuff/outputs/` respectively.)
+## Maintainers
+Dipro Ray (dipror2@illinois.edu)
 
 ## Where do I find X?
 * All source code files lie within `.py` files in the `./final_stuff/` directory.
