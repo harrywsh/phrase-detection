@@ -15,7 +15,7 @@ Dipro Ray (dipror2@illinois.edu)
 * [Only for repo maintainers] Metrics and associated scripts and ipynbs lie in the `./metrics/` directory.
 
 ## How do I run the framework?
-If you'd like to use spaCy's GPU capability, make sure you have access to a GPU. (For Nvidia users, use `nvidia-smi` to check GPU info.) Then, install CUDA Toolkit 10.2 (**note the version!** spaCy/cupy isn't compatible with the latest 11.0 version yet, as far as I know.) Use `nvcc --version` to ensure CUDA drivers (as well as the correct version) have been installed. Then, try:
+If you'd like to use spaCy's GPU capability, make sure you have access to a GPU. (For Nvidia users, use `nvidia-smi` to check GPU info.) Then, install CUDA Toolkit 10.2 (**note the version!** spaCy/cupy isn't compatible with the latest 11.0 version yet, as far as I know.) Use `nvcc --version` to ensure CUDA drivers (as well as the correct version) have been installed. Execute `pip install -U spacy[cuda102]`. Then, try:
 ```
 ~$ python3
 Python 3.7.4 (default, Aug 13 2019, 20:35:49)
