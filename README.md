@@ -1,5 +1,5 @@
-# Automated Domain-based Keyword Detection :zap:
-Keyword detection for a particular domain, powered by the [PRDualRank](https://dl.acm.org/doi/10.1145/1935826.1935933) framework! 
+# Automated Domain-based Keyword Detection :zap: :rocket:
+Keyword detection for a particular domain, based on the [PRDualRank](https://dl.acm.org/doi/10.1145/1935826.1935933) framework! 
 
 ## Contributors
 Work done during Fall 2019, Spring 2020, Summer 2020 at [FORWARD Lab](http://www.forwarddatalab.org/) @ [UIUC](https://cs.illinois.edu/), by Dipro Ray and Shuhan Wang.
@@ -38,3 +38,4 @@ If the last line is "True" and returns no errors, you're good to go with respect
       5. 9: This refers to the scoring method (look in `final_framework_v6.py` for details). For now, this parameter is always set to 9.
       6. An extra parameter `iter_num` exists, but it needs to be set within the source code of `final_framework_v6.py`. It affects the number of iterations to be run.
 6. As mentioned earlier, your results will be stored in the designated output file.
+7. Push your results, with a meaningful file name <ins>that indicates date, time, framework version, scoring method, corpus</ins> (and ensure it's in the outputs directory).
