@@ -15,6 +15,17 @@ Dipro Ray (dipror2@illinois.edu)
 * [Only for repo maintainers] Metrics and associated scripts and ipynbs lie in the `./metrics/` directory.
 
 ## How do I run the framework?
+If you'd like to use spaCy's GPU capability, make sure you have access to a GPU. (For Nvidia users, use `nvidia-smi` to check GPU info.) Then, install CUDA Toolkit 10.2 (**note the version!** spaCy/cupy isn't compatible with the latest 11.0 version yet, as far as I know.) Use `nvcc --version` to ensure CUDA drivers (as well as the correct version) have been installed. Then, try:
+```
+~$ python3
+Python 3.7.4 (default, Aug 13 2019, 20:35:49)
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import spacy
+>>> spacy.require_gpu()
+True
+```
+If the last line is "True" and returns no errors, you're good to go with respect to spaCy GPU compatibility. Before proceeding onto the next steps, execute `python -m spacy download en_core_web_sm`.
 1. `cd` into the repository directory and run `pip install -r requirements.txt`
 2. `cd` into the `final_stuff` subdirectory. This will be the main working directory henceforth.
 3. `final_framework_v6.py` is the script to be run to execute the latest framework. (FYI: It uses helper scripts: `prdualrank.py`, `wikiscore.py`, `extractor_helpers.py`.)
