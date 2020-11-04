@@ -1,0 +1,25 @@
+
+
+Iteration 1...
+
+Sorted Patterns:
+[[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}], [{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}], [{'TEXT': 'of'}, {'TEXT': 'deductive'}, {'POS': 'NOUN'}], [{'TEXT': 'modules'}, {'TEXT': 'and'}, {'POS': 'NOUN'}], [{'TEXT': 'with'}, {'TEXT': 'relational'}, {'POS': 'NOUN'}]]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'constraint programming', 'machine learning', 'databases']
+
+Iteration 2...
+
+Sorted Patterns:
+[[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}], [{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}], [{'TEXT': 'of'}, {'TEXT': 'deductive'}, {'POS': 'NOUN'}], [{'TEXT': 'modules'}, {'TEXT': 'and'}, {'POS': 'NOUN'}], [{'TEXT': 'with'}, {'TEXT': 'relational'}, {'POS': 'NOUN'}]]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'constraint programming', 'machine learning', 'databases']
+
+Iteration 3...
+
+Sorted Patterns:
+[[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}], [{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}], [{'TEXT': 'of'}, {'TEXT': 'deductive'}, {'POS': 'NOUN'}], [{'TEXT': 'modules'}, {'TEXT': 'and'}, {'POS': 'NOUN'}], [{'TEXT': 'with'}, {'TEXT': 'relational'}, {'POS': 'NOUN'}]]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'constraint programming', 'machine learning', 'databases']
+Final Sorted Keywords:
+[('natural language processing', 0.0229026992280079), ('artificial intelligence', 0.01601866944955826), ('constraint programming', 0.012031582456655827), ('machine learning', 0.010847643461148969), ('databases', 0.006653793946063513)]
+[LOG]: Error count: 0

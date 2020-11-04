@@ -153,4 +153,5 @@ def prDualRank(seedEidsWithConfidence, negativeSeedEids, eid2patterns, pattern2e
       expanded_pattern_pre = sorted(pattern2precision, key=pattern2precision.__getitem__, reverse=True)
       expanded_pattern_rec = sorted(pattern2recall, key=pattern2recall.__getitem__, reverse=True)
 
+      print("prdr length " + str(len(pattern2precision)))
       return expanded_pattern_pre, expanded_pattern_rec, expanded_eid_pre, expanded_eid_rec, pattern2precision, pattern2recall, eid2precision, eid2recall

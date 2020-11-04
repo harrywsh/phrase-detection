@@ -62,17 +62,14 @@ def getPhrases(file, context_pattern):
         for t in file_chunk:
             doc = nlp(t)
             for cp in context_pattern:
-                offset = 0
-                for i in range(len(cp)):
-                    if 'POS' in cp[i]:
-                        break
-                    offset += 1
+                pos_indices = [i for i in range(len(cp)) if 'POS' in cp[i]]
+                start_offset = min(pos_indices)
+                end_offset = max(pos_indices) + 1
                 matcher.add("extraction", None, cp)
                 matches = matcher(doc)
                 for match_id, start, end in matches:
-                    span = doc[start+offset:end].text
+                    span = doc[start+start_offset:start+end_offset].text
                     if span not in new_phrases:
                         new_phrases.add(span)
-    #                     print(span)
                 matcher.remove("extraction")
     return new_phrases

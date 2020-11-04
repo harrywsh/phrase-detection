@@ -1,0 +1,7 @@
+Hyperparameters are: 
+iter_num: 5
+max_patterns 500
+max_keywords 750
+
+
+Iteration 1...

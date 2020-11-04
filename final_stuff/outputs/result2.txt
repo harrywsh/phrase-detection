@@ -1,0 +1,19 @@
+
+Sorted Patterns:
+[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+[{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}]
+[{'TEXT': 'in'}, {'POS': 'VERB'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'distributed database systems', 'directed tree networks']
+Sorted Patterns:
+[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+[{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}]
+[{'TEXT': 'in'}, {'POS': 'VERB'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'distributed database systems', 'directed tree networks']
+Sorted Patterns:
+[{'TEXT': 'prolog'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+[{'TEXT': 'logic'}, {'TEXT': 'and'}, {'POS': 'ADJ'}, {'POS': 'NOUN'}]
+[{'TEXT': 'in'}, {'POS': 'VERB'}, {'POS': 'NOUN'}, {'POS': 'NOUN'}]
+Sorted Keywords:
+['natural language processing', 'artificial intelligence', 'distributed database systems', 'directed tree networks']

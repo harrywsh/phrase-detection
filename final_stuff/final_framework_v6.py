@@ -224,9 +224,15 @@ def execute_ranking(T_0, file, scoring_mode, wiki_wiki, cs_categories):
     ranked_patterns = [(unranked_patterns[i], pattern2fscore[i]) for i in sorted_patterns_ids] # All patterns are now sorted!
 
     phrase2fscore = {}
+    phrase2precision = {}
+    phrase2recall = {}
+
     for i in range(len(unranked_phrases)):
         precision = tuple_precision[i]
         recall = tuple_recall[i]
+
+        phrase2precision[unranked_phrases[i]] = precision
+        phrase2recall[unranked_phrases[i]] = recall
 
         fscore = 0.0
 
@@ -252,6 +258,13 @@ def execute_ranking(T_0, file, scoring_mode, wiki_wiki, cs_categories):
     sorted_phrases_ids = sorted(phrase2fscore, key=phrase2fscore.__getitem__, reverse=True)
     ranked_keywords = [(unranked_phrases[i], phrase2fscore[i]) for i in sorted_phrases_ids] # All keywords are now ranked!
 
+    with open('../development_ipynbs/cm_precision.pickle', 'wb') as f:
+        pickle.dump(phrase2precision, f)
+        print("[LOG] Saving precision values.")
+    with open('../development_ipynbs/cm_recall.pickle', 'wb') as f:
+        pickle.dump(phrase2recall, f)
+        print("[LOG] Saving recall values.")
+
     return ranked_patterns, ranked_keywords
 
 if (__name__ == "__main__"):
@@ -259,7 +272,7 @@ if (__name__ == "__main__"):
     seed = set(["machine learning", "artificial intelligence", "constraint programming", "natural language processing", "databases"])# "distributed database systems"])
     final_keywords = list(copy.deepcopy(seed))
     filename = "./data/" + sys.argv[1] # "./data/" + "small.txt"
-    iter_num = 3
+    iter_num = 5
     max_patterns = int(sys.argv[2]) # 100
     max_keywords = int(sys.argv[3]) # 500
     results_filename = "./outputs/" + sys.argv[4] # "./outputs/" + "results_small.txt"
