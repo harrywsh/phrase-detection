@@ -1,0 +1,800 @@
+constraint programming	100	1	Automatic
+attention mechanisms	100	1	Automatic
+long range dependencies	100	1	Manual
+supervised machine learning models	100	1	Automatic
+algorithms	100	1	Automatic
+artificial intelligence	100	1	Automatic
+distributed database systems	100	1	Automatic
+principal component analysis	100	1	Automatic
+natural language processing	100	1	Automatic
+machine learning	100	1	Automatic
+hierarchical deep reinforcement learning	100	1	Automatic
+sequence to sequence learning	100	1	Manual
+neural networks	100	1	Automatic
+databases	100	1	Automatic
+neural network	1.007126475802204	1	Automatic
+deep learning	1.0043011307483805	1	Automatic
+reinforcement learning	1.0023760995464437	1	Automatic
+deep reinforcement learning	1.001900051525071	1	Automatic
+speech recognition	1.000985155960146	1	Automatic
+natural language	1.0008768098172005	1	Automatic
+training data	1.0003434555360093	1	Manual
+machine translation	1.0003425173604092	1	Automatic
+neural machine translation	1.0002608488993057	1	Automatic
+language model	1.000240169839102	1	Manual
+deep networks	1.0002226576468944	1	Automatic
+automatic speech recognition	1.000215572901325	1	Automatic
+language modeling	1.0001979743729583	1	Automatic
+language models	1.0001952613941036	1	Manual
+gradient descent	1.0001525825457802	1	Manual
+multi task learning	1.0001253555079173	1	Manual
+computer vision	1.000110428567043	1	Automatic
+representation learning	1.0001102466672684	1	Automatic
+object detection	1.0000989479240179	1	Automatic
+stochastic gradient descent	1.0000894896137795	1	Manual
+neural language models	1.0000847229770642	1	Automatic
+character level	1.0000788894785397	1	Automatic
+object recognition	1.0000777687866174	1	Automatic
+image classification	1.0000677647275826	1	Automatic
+neural network architectures	1.000067166107951	1	Automatic
+deep learning models	1.0000601244172813	1	Automatic
+network architecture	1.0000592491042328	1	Automatic
+sentiment analysis	1.0000590696137892	1	Automatic
+supervised learning	1.0000558793922276	1	Automatic
+unsupervised learning	1.0000546097313352	1	Automatic
+domain adaptation	1.0000540531616016	1	Manual
+feature learning	1.000050897860198	1	Automatic
+word embeddings	1.0000449055444895	1	Manual
+word level	1.0000420476774385	1	Manual
+learning models	1.0000418586572752	1	Automatic
+neural network rnn	1.0000388227232995	1	Automatic
+neural network architecture	1.0000346557071706	1	Automatic
+feature extraction	1.000032951473356	1	Automatic
+generative models	1.0000302449198055	1	Automatic
+visual question answering	1.0000299511529178	1	Manual
+learning rate	1.0000299122431158	1	Manual
+neural network models	1.0000281348390785	1	Automatic
+language understanding	1.0000279296581913	1	Automatic
+transfer learning	1.0000273578766516	1	Automatic
+generative model	1.0000258519090302	1	Automatic
+networks	1.0000256205101326	1	Automatic
+deep learning methods	1.0000254756477158	1	Automatic
+attention mechanism	1.0000252098068236	1	Automatic
+encoder decoder	1.0000227180924761	1	Manual
+pattern recognition	1.0000215739334954	1	Automatic
+real time	1.0000212671697426	1	Automatic
+memory networks	1.0000210623891943	1	Automatic
+statistical machine translation	1.0000209584545368	1	Automatic
+learning	1.0000206011540518	1	Automatic
+language processing	1.000020425155677	1	Automatic
+classification problems	1.000020312101908	1	Manual
+benchmark datasets	1.000020079866221	1	Manual
+natural language generation	1.0000194228110564	1	Automatic
+real world applications	1.0000193852798689	1	Manual
+deep network	1.0000189895358933	1	Automatic
+neural architecture search	1.0000186850726283	1	Manual
+network	1.000018219822365	1	Automatic
+neural network language	1.000017439368601	1	Automatic
+image segmentation	1.0000171150818016	1	Automatic
+large scale	1.0000168042492399	0	None
+activation functions	1.00001640843051	1	Automatic
+dialogue systems	1.0000163847342076	1	Automatic
+natural language inference	1.0000161290819656	1	Automatic
+loss function	1.000016060991331	1	Automatic
+training samples	1.0000157058538262	1	Manual
+knowledge base	1.0000153383883683	1	Automatic
+deep learning approach	1.0000151446479126	1	Automatic
+objective function	1.0000148621259832	1	Automatic
+automatic evaluation metrics	1.0000148330050909	1	Manual
+high level	1.0000147285542509	0	None
+vocabulary speech recognition	1.0000146904195373	1	Automatic
+model	1.0000145404586958	1	Automatic
+neural network model	1.000014368394761	1	Automatic
+data sets	1.0000143449517007	1	Automatic
+data	1.0000143335425877	1	Manual
+neural network dnn	1.0000142396610605	1	Automatic
+text classification	1.0000138222547692	1	Automatic
+word embedding	1.0000129944699694	1	Manual
+deep reinforcement	1.0000129503641524	1	Manual
+neural models	1.0000124470765968	1	Automatic
+latent variable	1.0000118811791963	1	Automatic
+back propagation	1.000011509304041	1	Automatic
+recurrent network	1.0000111730393828	1	Automatic
+deep learning algorithms	1.00001099884812	1	Automatic
+black box optimization	1.0000108856036225	1	Automatic
+beam search	1.0000105496650744	1	Automatic
+black box	1.0000105079418091	1	Automatic
+deep learning work	1.000010286412006	1	Automatic
+algorithm	1.0000100994491865	1	Automatic
+many machine learning	1.0000099836486247	1	Automatic
+residual networks	1.0000099054063953	1	Automatic
+multi task	1.000009820243743	1	Manual
+different network architectures	1.0000098108293602	1	Automatic
+hard parameter sharing	1.0000097618052195	1	Automatic
+models	1.0000097531545122	1	Automatic
+hierarchical reinforcement learning	1.000009713020964	1	Automatic
+deep learning architectures	1.000009245936455	1	Manual
+online convex optimization	1.000009213097558	1	Automatic
+higher level inference	1.0000090613198866	1	Manual
+neural language model	1.0000090005423277	1	Automatic
+neural architectures	1.0000089992858658	1	Automatic
+experimental results	1.0000088044655717	1	Automatic
+question answering	1.0000087917010703	1	Manual
+visual dialog	1.0000087509762916	1	Manual
+semantic segmentation	1.0000085982787514	1	Automatic
+latent variables	1.0000085962918448	1	Automatic
+existing methods	1.0000085700838932	1	Automatic
+higher level	1.000008255414093	0	None
+learning methods	1.000008084065353	1	Automatic
+evaluation metrics	1.0000080644783411	1	Manual
+neural language	1.000007968287021	1	Automatic
+short term memory	1.0000079124206538	1	Automatic
+extreme learning	1.0000077976111452	1	Automatic
+neural sequence models	1.0000077869983015	1	Manual
+standard gradient descent	1.0000077845705626	1	Manual
+classification tasks	1.0000077115854646	1	Manual
+graphical models	1.000007630123869	1	Automatic
+information retrieval	1.0000076233305204	1	Automatic
+stochastic gradient	1.0000076172833254	1	Automatic
+activation function	1.0000074883442736	1	Automatic
+optical character recognition	1.0000074882562655	1	Automatic
+meta learning	1.0000074591724697	1	Automatic
+deep learning approaches	1.0000073545221653	1	Automatic
+latent space	1.0000073438353623	1	Automatic
+classification accuracy	1.0000073264410887	1	Manual
+error rate	1.000007302502804	1	Automatic
+natural language understanding	1.000007298050579	1	Automatic
+acoustic models	1.0000072686352608	1	Automatic
+tasks	1.0000072229750234	0	None
+proposed method	1.0000070435208643	1	Automatic
+deep learning architecture	1.0000070027905483	1	Manual
+computational cost	1.0000069729678003	1	Automatic
+dimensionality reduction	1.000006930403296	1	Manual
+memory network	1.0000068714139987	1	Automatic
+image	1.0000068694574875	1	Automatic
+relation classification	1.0000068424134259	1	Automatic
+natural language tokens	1.0000067942180988	1	Automatic
+multi layer perceptron	1.0000066241519379	1	Manual
+network rnn	1.000006495103627	1	Automatic
+input output	1.0000064833346451	1	Automatic
+other machine learning	1.0000064798244808	1	Automatic
+input	1.000006444017304	0	None
+batch normalization	1.0000064281927799	1	Automatic
+structured prediction	1.0000063160461323	1	Automatic
+many applications	1.0000063064176437	1	Automatic
+neural encoder decoder	1.0000062460965682	1	Manual
+pre training	1.0000062272591654	1	Manual
+sequence modeling	1.0000061719715287	1	Automatic
+classical machine learning	1.000006048654892	1	Automatic
+output layer	1.0000059689592387	1	Automatic
+error rates	1.0000059620289035	1	Automatic
+framework	1.000005930941414	1	Manual
+prior knowledge	1.0000059182234817	1	Automatic
+methods	1.0000058683555193	1	Automatic
+probabilistic programming language	1.0000058409600885	1	Automatic
+network training	1.0000058176304287	1	Automatic
+neural machine	1.000005788099712	1	Automatic
+real world images	1.000005650062558	1	Manual
+annotated training data	1.0000053530678754	1	Manual
+input space	1.000005344285064	1	Automatic
+datasets	1.0000053423206896	1	Automatic
+multi layer	1.000005333280121	1	Automatic
+adversarial examples	1.0000053180288089	1	Manual
+multilingual speech recognition	1.0000053002899014	1	Automatic
+neural network classification	1.0000052748006185	1	Automatic
+visual object recognition	1.0000052681904055	1	Automatic
+lstm	1.0000052246743982	1	Manual
+fast reinforcement learning	1.0000051821719989	1	Automatic
+images	1.0000051141009791	0	None
+lstm networks	1.0000050579912763	1	Automatic
+feature representations	1.000005008504263	1	Automatic
+speaker recognition	1.000005003927069	1	Automatic
+model parameters	1.0000049677707956	1	Automatic
+domain knowledge	1.000004964748023	1	Automatic
+multi task recurrent	1.0000049208747224	1	Manual
+short text classification	1.000004917170482	1	Automatic
+evolutionary algorithms	1.0000048790531515	1	Automatic
+neural network approach	1.0000048682942373	1	Automatic
+standard machine learning	1.0000048615461141	1	Automatic
+long term	1.000004800912881	1	Automatic
+image recognition	1.0000047332027588	1	Automatic
+architectures	1.0000046752756466	1	Automatic
+information	1.0000046513530172	1	Automatic
+open domain	1.000004628334515	1	Automatic
+optimization	1.0000045490062381	1	Automatic
+visual dialog models	1.0000045439544185	1	Manual
+simple language model	1.0000044627371365	1	Manual
+structured prediction models	1.0000043818829474	1	Automatic
+input features	1.000004306681525	1	Manual
+image processing	1.0000042979801906	1	Automatic
+recognition	1.0000042247878222	1	Automatic
+statistical machine learning	1.0000042164600322	1	Automatic
+fewer parameters	1.0000042082250507	1	Automatic
+deep belief networks	1.000004192742202	1	Automatic
+level language	1.000004138863649	1	Automatic
+deep learning network	1.0000041116280223	1	Automatic
+latent dirichlet allocation	1.000004087930097	1	Manual
+several benchmark datasets	1.0000040574921791	0	None
+visual turing test	1.0000040572239313	1	Automatic
+sparse pointer network	1.0000040564708792	1	Automatic
+mathematical language processing	1.000003979125849	1	Automatic
+real world data	1.0000039756862154	1	Manual
+adversarial perturbations	1.000003958125511	1	Manual
+problem	1.0000039394203113	0	None
+sequence labeling	1.000003923923772	1	Manual
+gesture recognition	1.0000039220627372	1	Automatic
+method	1.0000039045821651	1	Automatic
+classification	1.0000039027649317	1	Automatic
+model architecture	1.0000038143060284	1	Automatic
+sentence classification	1.000003805368078	1	Automatic
+recursive matching structure	1.0000037877448735	1	Manual
+layer	1.0000037701969722	1	Automatic
+rnn	1.000003746801256	1	Manual
+variational inference	1.0000037344953512	1	Manual
+task learning	1.0000037083054132	1	Automatic
+batch size	1.0000036914994554	1	Manual
+better performance	1.0000036856702097	1	Automatic
+architecture search	1.0000036811862218	1	Manual
+machine	1.0000036372738528	1	Automatic
+task	1.0000036038396451	0	None
+natural language sentences	1.000003569827525	1	Automatic
+textual entailment	1.0000035463767152	1	Manual
+applications	1.000003513264495	1	Automatic
+genetic programming	1.0000035019575872	1	Automatic
+processing	1.0000035012929596	1	Automatic
+various network architectures	1.0000034635213528	1	Automatic
+limited training data	1.0000034615261766	1	Manual
+neural model	1.0000034495294403	1	Automatic
+architecture	1.0000033781432065	1	Automatic
+features	1.000003376421492	1	Manual
+modeling	1.0000033726934139	1	Automatic
+conventional machine learning	1.0000033519999896	1	Automatic
+reinforcement	1.0000033271633617	1	Automatic
+radial basis function	1.000003291910852	1	Automatic
+network language	1.000003267436749	1	Automatic
+deep learning images	1.0000032478862984	1	Automatic
+nonlinear pca models	1.000003247131705	1	Automatic
+deep learning tasks	1.0000032468554845	1	Automatic
+traditional machine learning	1.0000032410120463	1	Automatic
+online representation learning	1.0000032408969457	1	Manual
+dataset	1.0000032369244067	1	Automatic
+classifier	1.00000317941589	1	Automatic
+anti malware system	1.0000031654869344	1	Automatic
+supervised feature learning	1.0000031586961047	1	Automatic
+data augmentation	1.0000031515411896	1	Automatic
+feature	1.0000031419941697	1	Manual
+difficult language processing	1.0000031406094776	1	Automatic
+response generation	1.0000031361351112	1	Manual
+unlabeled target data	1.0000031111047667	1	Manual
+source language	1.000003105020553	1	Automatic
+neural network layers	1.0000030846313632	1	Automatic
+single learning algorithm	1.000003084440163	1	Automatic
+interior point methods	1.0000030842868157	1	Manual
+learning machines	1.00000307883789	1	Automatic
+high level features	1.0000030300717282	1	Manual
+medical image analysis	1.0000030296102353	1	Automatic
+word error	1.0000030271338003	1	Automatic
+novel reinforcement learning	1.0000030253782708	1	Automatic
+neural network functions	1.0000030034770744	1	Automatic
+continuous speech	1.0000029793157146	1	Manual
+complex data processing	1.0000029776042942	1	Automatic
+temporal difference methods	1.0000029758532627	1	Automatic
+temporal stream data	1.0000029756082078	1	Manual
+recurrent models	1.000002969990924	1	Automatic
+supervised image recognition	1.000002922842025	1	Manual
+several interpreter models	1.000002922200043	0	None
+good function optimization	1.0000029219837814	1	Automatic
+supervised learning problem	1.0000029219226676	1	Automatic
+intelligent text recognition	1.0000029219054518	1	Manual
+binary classification problem	1.0000029214761632	1	Manual
+visual turing challenge	1.000002921418172	1	Manual
+cross domain object	1.0000029214097117	1	Manual
+particular machine learning	1.0000029189916768	1	Automatic
+novel machine learning	1.000002918787934	1	Automatic
+basic machine learning	1.000002918787934	1	Automatic
+support vector	1.0000028932432596	1	Automatic
+language recognition	1.0000028924481572	1	Automatic
+proposed algorithm	1.000002891098714	1	Automatic
+vector representations	1.0000028648407828	1	Automatic
+embeddings	1.0000028550251983	1	Manual
+simplified speech recognition	1.0000028411322068	1	Automatic
+sequential mapping algorithm	1.0000028407580337	1	Automatic
+spoken dialogue systems	1.000002839674518	1	Manual
+text	1.0000028236200953	1	Manual
+structured prediction problems	1.0000028138960573	1	Automatic
+linear support vector	1.0000028135385	1	Automatic
+long term dependencies	1.0000028117931925	1	Manual
+value function	1.000002810918668	1	Automatic
+multi label	1.0000028077708434	1	Manual
+high level abstractions	1.0000028049248908	1	Manual
+domain	1.000002768885264	1	Automatic
+neural language modeling	1.000002759932877	1	Automatic
+deep learning framework	1.0000027595934065	1	Automatic
+recurrent networks	1.0000027502316895	1	Manual
+memory lstm	1.000002734498943	1	Automatic
+shot learning	1.000002726406424	1	Automatic
+language	1.0000027244958123	1	Automatic
+electronic health records	1.0000027232705138	1	Manual
+multimodal sentiment analysis	1.0000027047443043	1	Manual
+automatic speech	1.0000026817504037	1	Manual
+neural networks area	1.000002679448609	1	Automatic
+difficult parameter optimization	1.0000026784848068	1	Manual
+convolutional networks	1.0000026752514766	1	Automatic
+graphical user interface	1.000002648636407	1	Automatic
+memory	1.0000026424205934	1	Automatic
+artificial intelligence psychology	1.0000025982530911	1	Automatic
+particular image data	1.000002597640976	0	None
+non convex regularizations	1.0000025975836733	1	Manual
+natural language text	1.0000025975836733	1	Automatic
+gaussian mixture models	1.0000025975107276	1	Manual
+semantic role labeling	1.0000025968672792	1	Manual
+large scale learning	1.0000025934689913	1	Automatic
+adversarial networks	1.0000025892623892	1	Automatic
+raw sensor data	1.000002570042373	1	Manual
+image data	1.0000025518962168	1	Automatic
+better speech recognition	1.0000025166052962	1	Automatic
+low memory footprint	1.0000025162531025	1	Manual
+linear dimensionality reduction	1.0000025161554642	1	Manual
+fundamental machine learning	1.0000025134002115	1	Automatic
+data representation	1.0000025119441274	1	Automatic
+learning systems	1.000002511935995	1	Automatic
+optimization problems	1.0000025036674114	1	Manual
+inductive program synthesis	1.0000024890853054	1	Automatic
+neural attention model	1.0000024886643413	1	Manual
+semantic latent representations	1.000002436340819	1	Automatic
+visual dialog systems	1.000002435773205	1	Manual
+generative image models	1.0000024356157147	1	Automatic
+temporal pattern recognition	1.0000024355561754	1	Automatic
+recent output representations	1.000002435234496	1	Manual
+several language modeling	1.0000024351021917	0	None
+mobile application user	1.000002435079226	1	Automatic
+multi class tasks	1.000002434799977	1	Manual
+real time data	1.0000024344137644	1	Automatic
+challenging task	1.000002430041506	0	None
+sentence level	1.0000023967097653	1	Manual
+neural architecture	1.000002392556761	1	Automatic
+spectral clustering	1.0000023868015169	1	Manual
+variational auto encoders	1.000002380685908	1	Manual
+nonlinear function approximation	1.0000023799483369	1	Manual
+context	1.000002373024131	0	None
+non convex	1.0000023670689153	0	None
+embedding	1.0000023639309892	1	Manual
+word	1.0000023564590081	0	None
+semantic parsing tasks	1.0000023544118426	1	Automatic
+natural language data	1.0000023544024672	1	Automatic
+hierarchical memory network	1.0000023540599172	1	Automatic
+latent sentence vector	1.0000023539098228	1	Manual
+complex segmentation tasks	1.0000023537967364	1	Manual
+fast representation learning	1.0000023512451686	1	Manual
+deep	1.000002345294618	0	None
+error detection	1.0000023138902379	1	Automatic
+neural dialogue systems	1.000002299689095	1	Manual
+single label classification	1.0000022994470557	1	Automatic
+whole image classification	1.0000022993554143	1	Manual
+current cad systems	1.000002273255359	1	Manual
+multilingual recognition systems	1.000002273255359	1	Manual
+biological image segmentation	1.0000022728759854	1	Automatic
+neural transfer function	1.0000022726057813	1	Automatic
+visual feature space	1.0000022715195043	1	Manual
+recurrent model	1.0000022631555197	1	Automatic
+system	1.0000022581167487	1	Automatic
+error	1.0000022368955683	0	None
+sequential data	1.00000222586584	1	Automatic
+state space	1.000002201009466	1	Automatic
+statistical language models	1.0000021919353566	1	Automatic
+simple clustering methods	1.0000021919192172	1	Manual
+single input image	1.0000021914281378	1	Manual
+multi class	1.0000021899201508	0	None
+successful reinforcement learning	1.0000021873723013	1	Automatic
+data points	1.0000021718084224	1	Automatic
+neural network decisions	1.0000021651017443	1	Automatic
+simple optimization problem	1.0000021647111597	1	Manual
+handwritten digit classification	1.0000021644806893	1	Automatic
+raw speech signal	1.0000021640976515	1	Manual
+lower level function	1.0000021638236947	1	Automatic
+standard multitask learning	1.0000021595807564	1	Manual
+maximum likelihood	1.0000021459284545	1	Automatic
+results	1.0000021438771036	0	None
+model outperforms	1.000002139058757	0	None
+recognition performance	1.0000021295446002	1	Manual
+deep lstm architectures	1.0000021111120334	1	Automatic
+conditional language models	1.0000021109834567	1	Automatic
+new regularization methods	1.0000021108511086	1	Manual
+neural training model	1.0000021105933237	1	Manual
+complexity	1.0000020871307789	1	Automatic
+backpropagation	1.0000020736779223	1	Automatic
+sequence models	1.0000020710390853	1	Automatic
+target language	1.0000020578869733	1	Automatic
+stochastic gradient algorithms	1.0000020565326313	1	Manual
+available training data	1.0000020565218048	1	Manual
+supervised learning algorithm	1.0000020564754906	1	Automatic
+facial feature recognition	1.0000020562890684	1	Automatic
+high level concepts	1.0000020561191	1	Manual
+dynamic programming languages	1.000002056021453	1	Automatic
+first machine learning	1.0000020532441074	1	Automatic
+test time	1.0000020483545156	1	Automatic
+search	1.0000020350285916	1	Automatic
+analysis	1.0000020319425584	1	Automatic
+commercial web search	1.0000020288043057	1	Manual
+convolutional layer computation	1.000002002718951	1	Automatic
+deep learning model	1.0000020024132974	1	Automatic
+object	1.0000019985642017	1	Automatic
+art results	1.0000019966275355	0	None
+feature engineering	1.0000019805849338	1	Automatic
+language generation	1.0000019747310724	1	Automatic
+computer	1.0000019699010563	1	Automatic
+recommender systems	1.0000019526924282	1	Automatic
+prediction	1.0000019487549825	1	Automatic
+statistical machine translations	1.0000019487285623	1	Automatic
+sparse windows generation	1.0000019484992464	1	Automatic
+many computer vision	1.000001948428147	1	Automatic
+traditional turing machine	1.000001948239833	1	Automatic
+deep lstm rnn	1.000001948239833	1	Manual
+supervised classification problem	1.000001948239833	1	Manual
+wheeled robot locomotion	1.0000019480663647	1	Automatic
+small hardware footprint	1.0000019480663647	1	Manual
+human evaluation metrics	1.0000019478486146	1	Manual
+discrete latent variable	1.0000019477954465	1	Automatic
+neural qa system	1.0000019476498272	1	Manual
+temporal classification ctc	1.0000019464762258	1	Automatic
+fixed length vector	1.0000019463550498	1	Automatic
+supervised representation learning	1.000001945178523	1	Automatic
+performance	1.0000019272940361	1	Automatic
+single depth image	1.0000018941220086	1	Manual
+dynamic programming algorithm	1.0000018941220086	1	Automatic
+neural network technique	1.0000018941220086	1	Automatic
+multiple image datasets	1.0000018937038162	1	Automatic
+neural error detection	1.0000018937038162	1	Automatic
+synaptic probability models	1.000001893506228	1	Manual
+popular machine learning	1.0000018911457351	1	Automatic
+successful machine learning	1.0000018911457351	1	Automatic
+systems	1.0000018900971417	1	Automatic
+parameters	1.0000018836194542	1	Automatic
+computation	1.0000018790509553	1	Automatic
+metric learning	1.0000018675685447	1	Automatic
+biological neuron models	1.0000018673048507	1	Manual
+output	1.000001867232074	1	Automatic
+human evaluation study	1.0000018595060252	1	Manual
+sentiment classification	1.0000018551838363	1	Automatic
+neural network sentence	1.000001840336184	1	Automatic
+traditional computer vision	1.0000018401820392	1	Automatic
+deep learning techniques	1.000001840055313	1	Automatic
+hard matching problem	1.000001840004187	1	Automatic
+multi layer input	1.000001840004187	1	Manual
+new sampling algorithm	1.000001840004187	1	Automatic
+restricted boltzmann machine	1.000001840004187	1	Manual
+neural nets	1.0000018217350388	1	Automatic
+knowledge bases	1.0000018210559156	1	Automatic
+source	1.0000017999589186	1	Automatic
+model complexity	1.0000017899258518	1	Automatic
+modern signal processing	1.000001786806836	1	Automatic
+large training datasets	1.0000017863725041	1	Manual
+powerful learning systems	1.0000017862524164	1	Automatic
+neural dependency parsers	1.0000017862086008	1	Manual
+prior program structure	1.0000017860256072	1	Automatic
+real user experience	1.0000017859359909	1	Manual
+real world users	1.0000017859359909	1	Manual
+statistical learning problem	1.0000017858863686	1	Manual
+huge training data	1.0000017853407512	1	Manual
+translation systems	1.000001781624171	1	Automatic
+application	1.0000017710235596	1	Automatic
+significant improvements	1.000001745069118	0	None
+image pixels	1.0000017408092357	1	Manual
+encoder	1.0000017382548538	1	Manual
+image analysis	1.000001737827882	1	Automatic
+feature selection	1.000001737827882	1	Automatic
+different language modeling	1.0000017324627695	1	Manual
+better recognition accuracies	1.0000017322029788	1	Manual
+standard computer vision	1.0000017322029788	1	Automatic
+graphical processing units	1.0000017320810204	1	Automatic
+such learning parameters	1.0000017320810204	0	None
+multi language image	1.000001731935943	1	Automatic
+large scale svm	1.000001731935943	1	Manual
+adversarial samples inputs	1.000001731935943	1	Manual
+partial optimization guarantee	1.000001731768553	1	Manual
+many classification problems	1.000001731558095	0	None
+multi world approach	1.0000017312097385	1	Manual
+challenging reinforcement learning	1.0000017287864624	1	Automatic
+unsupervised domain	1.0000017222454676	1	Automatic
+auto encoder	1.0000017050206909	1	Manual
+hierarchical value functions	1.0000017049939436	1	Automatic
+optimal mutation learning	1.0000017028361015	1	Manual
+new model learning	1.0000017026252597	1	Automatic
+inference	1.0000016957726556	1	Automatic
+computational modeling work	1.0000016851677032	1	Automatic
+information extraction	1.0000016815218458	1	Automatic
+neural sequence labeling	1.0000016780715903	1	Manual
+structured output problems	1.000001677953443	1	Manual
+continuous learning reinforcement	1.000001677953443	1	Manual
+simple preprocessing steps	1.000001677953443	1	Manual
+statistical machine	1.0000016776956429	1	Automatic
+deep belief network	1.0000016776507403	1	Automatic
+multi scale representation	1.0000016776507403	1	Manual
+computational learning setup	1.0000016776507403	1	Automatic
+sequential latent variable	1.0000016776507403	1	Automatic
+supervised similarity network	1.0000016776507403	1	Manual
+gradient	1.0000016708032444	1	Manual
+multi	1.0000016677143295	0	None
+autoencoder	1.000001654015306	1	Manual
+processing tasks	1.0000016488058672	1	Manual
+activity recognition	1.0000016450348876	1	Automatic
+policy gradient	1.0000016432479015	1	Manual
+user interface	1.000001639536091	1	Automatic
+translation	1.0000016388688544	1	Automatic
+knowledge	1.0000016386014254	1	Automatic
+rnns	1.0000016353400547	1	Manual
+incremental learning	1.000001634266765	1	Automatic
+holistic face processing	1.0000016242418281	1	Automatic
+sequential processing tasks	1.0000016239473835	1	Automatic
+various model architectures	1.0000016239319378	1	Manual
+less training data	1.0000016238407095	1	Manual
+structured learning problems	1.0000016238258689	1	Automatic
+current computing possibilities	1.0000016236898588	0	None
+visual analysis tool	1.0000016235329305	1	Manual
+many recommender systems	1.0000016233094005	0	None
+partial sampling scheme	1.000001623279641	0	None
+logarithmic time lookup	1.0000016231744802	1	Manual
+neural attention mechanism	1.0000016231095588	1	Manual
+gaussian process regression	1.0000016230640674	1	Manual
+dependent speaker recognition	1.0000016228633355	1	Manual
+word models	1.0000016226086874	1	Automatic
+maximum likelihood learning	1.0000016216609908	1	Automatic
+sparse	1.0000016185391036	0	None
+user	1.0000016163550611	0	None
+layers	1.0000016145515782	1	Manual
+adversarial network	1.0000016128050686	1	Automatic
+sequence learning	1.0000015896032728	1	Automatic
+class classification	1.000001579352856	1	Automatic
+multilayer perceptron	1.0000015753513662	1	Manual
+detection	1.000001572130397	1	Automatic
+training images	1.0000015711024843	1	Automatic
+sequential input data	1.0000015698110376	1	Automatic
+dimensional grid data	1.0000015698110376	1	Manual
+deep auto encoders	1.0000015696982973	1	Manual
+better user experience	1.000001569566821	1	Manual
+deep learning task	1.0000015694151236	1	Automatic
+neural network synthesis	1.0000015694151236	1	Automatic
+human machine translation	1.0000015690686217	1	Automatic
+neural sequence	1.0000015645416613	1	Automatic
+spiking networks	1.0000015564123705	1	Automatic
+deep models	1.0000015561641138	1	Automatic
+convolutional layers	1.0000015511840357	1	Automatic
+network classifiers	1.0000015505146738	1	Automatic
+sufficient training data	1.0000015426486113	1	Manual
+free training data	1.0000015426486113	1	Manual
+online stream data	1.0000015426310402	1	Manual
+structural support vector	1.0000015424040887	1	Manual
+dnn	1.0000015382523788	1	Manual
+significant improvement	1.0000015179599047	0	None
+large recurrent network	1.0000015156774424	1	Manual
+structured output spaces	1.0000015156774424	1	Manual
+many cheminformatics software	1.0000015156774424	0	None
+various bigram types	1.000001515570729	1	Manual
+dynamic data sets	1.0000015154437862	1	Automatic
+raw image pixels	1.0000015153394235	1	Manual
+computational convergence rates	1.0000015153394235	1	Manual
+hierarchical sentence model	1.0000015153394235	1	Automatic
+novel search algorithm	1.0000015152973198	1	Automatic
+hierarchical recurrent sequence	1.0000015152973198	1	Manual
+structured learning problem	1.0000015152973198	1	Automatic
+new data representation	1.0000015152973198	1	Automatic
+single output vector	1.0000015152973198	1	Automatic
+new source nodes	1.0000015149627661	1	Automatic
+regularization	1.0000015128260624	1	Automatic
+recurrent	1.0000015064763432	0	None
+pipeline optimization	1.000001490566928	1	Automatic
+video	1.000001489959408	0	None
+building blocks	1.0000014885146489	0	None
+common identity code	1.0000014877522116	1	Manual
+previous work	1.0000014865775553	1	Manual
+inference algorithm	1.0000014852266255	1	Automatic
+classifiers	1.0000014806383604	1	Automatic
+image description	1.0000014801699855	1	Automatic
+speech signals	1.000001479779333	1	Manual
+textual representation methods	1.000001461555917	1	Automatic
+arbitrary stream data	1.0000014615481283	1	Manual
+many pattern recognition	1.0000014615175414	1	Automatic
+asynchronous learning capabilities	1.000001461513657	1	Manual
+cheap commodity hardware	1.0000014614431634	0	None
+supervised digit classification	1.0000014614054389	1	Automatic
+gaussian process models	1.000001461368717	1	Automatic
+wearable sensor data	1.000001461352603	1	Manual
+linear regression task	1.000001461179519	1	Automatic
+stochastic policy network	1.000001461179519	1	Manual
+neural network conversation	1.000001461179519	1	Manual
+simple similarity classifier	1.000001461179519	1	Manual
+simpler projection network	1.0000014610494177	1	Manual
+key phrase detection	1.0000014607575423	1	Automatic
+supervised separation learning	1.0000014595736237	1	Automatic
+many tasks	1.0000014568702211	0	None
+character recognition	1.0000014442511138	1	Automatic
+imagenet	1.0000014432765632	1	Manual
+network classification	1.0000014401269164	1	Automatic
+convex optimization	1.000001431428573	1	Automatic
+accuracy	1.0000014261776586	1	Manual
+computational complexity	1.0000014184401664	1	Automatic
+real world robotics	1.000001407414692	1	Automatic
+open information extraction	1.000001407414692	1	Automatic
+neural networks dynamics	1.0000014073834835	1	Automatic
+neural move predictors	1.0000014073156007	1	Manual
+natural language description	1.000001407061721	1	Automatic
+variable length encoding	1.000001407061721	1	Automatic
+specific problem instance	1.000001407061721	0	None
+joint learning approach	1.000001407061721	1	Manual
+small context window	1.000001407061721	1	Manual
+linear reduction k	1.000001407061721	1	Automatic
+simple detection problem	1.000001407061721	1	Automatic
+most preprocessing steps	1.0000014067510639	0	None
+joint sentence classification	1.000001406727653	1	Automatic
+probabilistic models	1.0000013981864797	1	Manual
+original image	1.000001394868582	1	Automatic
+problems	1.0000013909199534	0	None
+recent image classification	1.0000013802161918	1	Automatic
+physical hexapod robot	1.0000013798799496	1	Manual
+box optimization	1.0000013717779688	1	Automatic
+input text	1.0000013690975682	1	Automatic
+word representations	1.0000013670918355	1	Automatic
+recognition ocr	1.0000013621888644	1	Automatic
+structured prediction tasks	1.000001353289303	1	Automatic
+visual feature mapping	1.0000013530746992	1	Automatic
+human robot teams	1.0000013530746992	1	Manual
+large scale dataset	1.0000013529439258	1	Manual
+continuous markov decision	1.0000013529439258	1	Manual
+unlabeled data	1.0000013519791313	1	Manual
+application domains	1.0000013370205982	1	Automatic
+training algorithms	1.0000013334016689	1	Automatic
+hidden units	1.000001333293088	1	Automatic
+dynamical systems	1.000001331198876	1	Automatic
+model design	1.0000013264816432	1	Automatic
+matching	1.000001318014836	0	None
+image classifiers	1.000001315522784	1	Manual
+digit recognition	1.0000013151379104	1	Automatic
+phoneme recognition	1.0000013139843484	1	Automatic
+probabilistic model	1.0000013139474155	1	Automatic
+evolutionary algorithm	1.0000013132655527	1	Automatic
+visual recognition	1.0000013090534914	1	Automatic
+high level representation	1.000001299151953	1	Automatic
+external memory resources	1.000001299137351	1	Manual
+traditional auto encoder	1.000001299060484	1	Manual
+automatic video highlight	1.000001299060484	1	Manual
+subsequent network layers	1.0000012989516762	0	None
+alternative inference algorithms	1.0000012988622224	1	Manual
+dynamic boltzmann machine	1.0000012988261335	1	Manual
+new optimization corner	1.0000012988261335	1	Automatic
+new synchronization protocol	1.0000012988261335	1	Manual
+new variance reduction	1.0000012988261335	1	Automatic
+single noise vector	1.0000012988261335	1	Manual
+joint optimization framework	1.0000012988261335	1	Manual
+consistent performance improvements	1.000001298720431	0	None
+static frame skip	1.000001298710488	1	Automatic
+parametric speech synthesis	1.0000012986312428	1	Automatic
+general recurrent model	1.0000012985393734	1	Manual
+imagenet classification	1.0000012781745595	1	Automatic
+recent work	1.0000012737025734	0	None
+deep architecture	1.000001271713099	1	Automatic
+representation	1.0000012627674095	1	Automatic
+reconstruction error	1.000001258366231	1	Automatic
+task recurrent	1.0000012578980733	0	None
+such tasks	1.0000012523930464	0	None
+textual data	1.0000012506007674	1	Automatic
+structured data	1.0000012495677832	1	Automatic
+visual question	1.0000012461837102	1	Manual
+traditional autoencoder models	1.000001245043276	1	Manual
+nearest neighbor methods	1.0000012450289797	1	Manual
+propositional logic formulae	1.0000012449329303	1	Automatic
+discrete text samples	1.000001244828656	1	Manual
+hierarchical latent variables	1.000001244828656	1	Manual
+particular tasks domains	1.000001244828656	0	None
+virtual reference objects	1.000001244828656	1	Manual
+hierarchical recurrent encoder	1.0000012447429294	1	Automatic
+hierarchical latent variable	1.0000012447083444	1	Manual
+latent edit vector	1.0000012447083444	1	Manual
+comprehensive data model	1.0000012447083444	1	Manual
+small generalization error	1.0000012447083444	1	Manual
+neural feedback relevance	1.0000012447083444	1	Manual
+non expert users	1.0000012444335324	0	None
+structural feature learning	1.0000012427525087	1	Manual
+hyperparameter optimization	1.0000012334392552	1	Automatic
+sentence representation	1.0000012332700998	1	Automatic
+runtime performance	1.0000012307890014	1	Manual
+patterns	1.000001229286053	0	None
+latent	1.0000012282918245	0	None
+translation models	1.000001227537093	1	Automatic
+phoneme recognition task	1.000001217541033	1	Manual
+flexible factorization machine	1.000001217541033	1	Manual
+mnist	1.0000012137899497	1	Manual
+function	1.0000012116703072	1	Automatic
+standard backpropagation	1.000001206451493	1	Automatic
+hierarchical reinforcement	1.000001204702345	1	Automatic
+different datasets	1.0000012044720579	1	Manual
+segmentation	1.000001204183959	1	Automatic
+adversarial nets	1.0000012030631336	1	Manual
+automatic evaluation	1.0000012030234102	1	Automatic
+query	1.0000011971085596	1	Manual
+language identification	1.000001195421649	1	Automatic
+open type systems	1.0000011909159265	1	Automatic
+commercial speech systems	1.0000011909159265	1	Manual
+different language tasks	1.00000119089449	1	Manual
+low level descriptors	1.0000011908892257	1	Automatic
+natural language dialog	1.0000011908892257	1	Automatic
+probabilistic topic modelling	1.0000011908758406	1	Manual
+natural images video	1.0000011908053794	0	None
+advanced pattern classifiers	1.0000011907056388	1	Manual
+reduced word error	1.000001190590558	1	Manual
+text data	1.0000011898608172	1	Automatic
+deeper networks	1.0000011866837097	1	Automatic
+sample extension	1.0000011851162092	1	Automatic
+level	1.000001184909255	0	None
+online learning	1.0000011777684477	1	Automatic
+graph	1.0000011723722737	1	Manual
+universal perturbations	1.0000011663828254	1	Manual
+end	1.0000011629634522	0	None
+convolutional autoencoder	1.0000011613667152	1	Automatic
+dimensional data	1.000001147338324	1	Automatic
+new data	1.0000011466414824	1	Automatic
+deep intelligence	1.0000011436849388	1	Automatic
+action recognition	1.000001143357599	1	Automatic
+backpropagation training	1.0000011423843878	1	Automatic
+unified framework	1.0000011388572079	1	Manual
+nn architecture	1.0000011382156262	1	Automatic
+high dimension d	1.0000011367821333	1	Automatic
+visual classification tasks	1.0000011367628916	1	Automatic
+small scale tasks	1.00000113667889	1	Manual
+perceptual inference tasks	1.00000113667889	1	Manual
+traditional data structures	1.0000011366778314	1	Automatic
+neural response properties	1.0000011366778314	1	Manual
+high quality data	1.0000011366073955	1	Manual
+different hyperparameter choices	1.0000011365826245	1	Manual
+other network structures	1.0000011365826245	0	None
+gaussian attention model	1.0000011365043524	1	Manual
+nonnegative matrix factorization	1.0000011365043524	1	Manual
+discrete speech code	1.0000011364727746	1	Manual
+unique minimizer b	1.0000011364727746	0	None
+multi view network	1.0000011364727746	1	Automatic
+smaller learning rate	1.0000011364727746	1	Manual
+new video dataset	1.0000011364727746	0	None
+key value attention	1.0000011363715848	1	Manual
+recurrent unit gru	1.0000011363274903	1	Manual
+low resource language	1.0000011362218595	1	Automatic
+many perception tasks	1.000001136174915	0	None
+work	1.0000011318197644	0	None
+candidate solutions	1.0000011267391078	0	None
+time series	1.0000011221606964	1	Automatic
+external memory	1.0000011192732448	1	Automatic
+dnns	1.000001117896075	1	Manual
+representations	1.0000011142543772	1	Automatic
+latent dirichlet	1.0000011086810152	0	None
+different tasks	1.0000011069787333	1	Automatic
+user interactions	1.0000011023449675	1	Automatic
+document	1.0000011017657304	1	Manual
+time	1.0000010850423322	0	None
+data science	1.0000010838997992	1	Automatic
+different image patterns	1.0000010825502863	1	Manual
+french parallel corpora	1.000001082459613	1	Manual
+universal approximation theorem	1.000001082354994	1	Automatic
+deep generator network	1.000001082354994	1	Manual
+stochastic loss selection	1.000001082354994	1	Manual
+pattern	1.000001082165984	0	None
+higher order representations	1.0000010820482403	1	Automatic
+progressive learning technique	1.0000010820272134	1	Manual
+universal neuron grid	1.0000010820057352	1	Manual
+loss functions	1.0000010815577725	1	Automatic
+convergence rates	1.0000010758427254	1	Manual
+optimization tool	1.0000010754444935	1	Manual
+dynamic memory	1.0000010730388587	1	Automatic
+convolutional layer	1.0000010725753956	1	Automatic
+current state	1.000001068470916	0	None
+natural images	1.0000010637058176	1	Automatic
+semantic representation	1.000001059189087	1	Automatic
+clustering	1.0000010589988937	1	Automatic
+supervised dialog data	1.0000010555181444	1	Manual
+neural network frameworks	1.0000010554897074	1	Automatic
+structured learning algorithms	1.0000010554897074	1	Automatic
+neural model network	1.0000010554897074	1	Automatic
+neural network component	1.0000010554897074	1	Automatic
+different dropping probabilities	1.0000010554178023	1	Manual
+useful problem structure	1.00000105524806	1	Manual
+smooth optimisation perspective	1.0000010551314669	1	Manual
+optimization methods	1.0000010529549073	1	Automatic
+image understanding	1.0000010525176628	1	Automatic
+recurrent units	1.000001051650514	1	Automatic

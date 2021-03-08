@@ -1,0 +1,800 @@
+1	high computational complexity	1	Automatic
+2	other settings	0	None
+3	the following general problem	0	None
+4	a new strategy for gap estimation	0	None
+5	the focus of our work	0	None
+6	a simple but natural subclass	0	None
+7	mine topics	0	None
+8	the distributed deep learning	0	None
+9	the bayes	0	None
+10	the location and behavior	0	None
+11	compilations of palaeontological data	0	None
+12	principled methods	1	Automatic
+13	various	0	None
+14	a statistical analysis	1	Automatic
+15	an infinite dimensional optimization problem	0	None
+16	memory to store their weights	0	None
+17	computer science	1	Automatic
+18	semantic category writing style or sentiment	0	None
+19	the discovery	0	None
+20	parametric conditional independence testing ci testing	0	None
+21	the collaborative filtering cf technology	0	None
+22	methods	1	Automatic
+23	virtual reality simulation	1	Automatic
+24	sparse signals	1	Automatic
+25	latent force models lfms	1	Manual
+26	much research effort	0	None
+27	expert systems	1	Automatic
+28	hmi	0	None
+29	sets of large theory problems	0	None
+30	off policy batch	0	None
+31	the potential influence	0	None
+32	the generative adversarial nets gans	0	None
+33	the size of the hypothesis class	0	None
+34	a major objective	0	None
+35	a state dependent baseline	0	None
+36	eeg signals	1	Automatic
+37	zillow trulia	0	None
+38	large video corpora	0	None
+39	new l1	0	None
+40	the lack of training instances	0	None
+41	users reviews	1	Automatic
+42	industry and research	0	None
+43	human behavior	0	None
+44	new original keypoints presence features	0	None
+45	these models	1	Automatic
+46	operations	1	Automatic
+47	predictive accuracy	1	Automatic
+48	important tasks	0	None
+49	a new type of feed	0	None
+50	unlabeled text	0	None
+51	personalization	1	Automatic
+52	any powerful discriminator	0	None
+53	the assistance	0	None
+54	k means	1	Manual
+55	many kinds	0	None
+56	terms of evolutionary game theory	0	None
+57	carefully crafted adversarial examples	1	Manual
+58	suitable distinctive landmarks for localization	0	None
+59	the alexa skills kit	1	Manual
+60	neural architectures	1	Automatic
+61	dsn method	1	Automatic
+62	x ray radiation dose	0	None
+63	sentence level polarity correction	1	Manual
+64	our proposed deeply supervised nets	0	None
+65	the maximizer	0	None
+66	infinite horizon	1	Automatic
+67	approximations	1	Automatic
+68	spatial understanding	1	Automatic
+69	today s	0	None
+70	hierarchical beta process	1	Automatic
+71	digital pathology	1	Automatic
+72	transe transh	0	None
+73	each word	1	Automatic
+74	realistic real valued synthetic data	1	Manual
+75	automatic estimation of market	1	Manual
+76	non linear nonparametric learning	0	None
+77	bayesian reinforcement	1	Manual
+78	initializations	0	None
+79	the text based video search	0	None
+80	objects using deep neural networks	0	None
+81	semantic concepts	1	Manual
+82	an explosion	0	None
+83	a new kind of objective function	0	None
+84	automatically segment magnetic resonance mr images	0	None
+85	the asymptotic performance	0	None
+86	multisensory models	1	Manual
+87	sequence to sequence models	1	Manual
+88	recent svd free matrix factorization formulations	1	Manual
+89	differences between two random variables	0	None
+90	robust 3d reconstructions	1	Manual
+91	unsolved	0	None
+92	a low rank matrix factorization formulation	0	None
+93	the condition	1	Automatic
+94	critic	0	None
+95	reuse of neural resources	1	Manual
+96	latency requirements	1	Automatic
+97	a dichotomy	0	None
+98	various measures	0	None
+99	adaptive filtering system identification	1	Manual
+100	its attractiveness for mobile embedded applications	0	None
+101	resnets of identical network structure	1	Manual
+102	manifold learning	1	Automatic
+103	the art approaches	0	None
+104	chromatin marks	1	Automatic
+105	the ecml pkdd	0	None
+106	deep learning techniques	1	Automatic
+107	a specific phenotype or clinical outcome	0	None
+108	classical machine	1	Manual
+109	a popular data representation method	0	None
+110	a very large number of labels	0	None
+111	the word popularity based negative sampler	0	None
+112	grouping and classifying artwork	1	Manual
+113	relational information retrieval	1	Automatic
+114	van der maaten hinton in 2008	0	None
+115	identification re id methods	0	None
+116	both latent variables	1	Automatic
+117	the worst case	1	Automatic
+118	the area of data mining	0	None
+119	3	0	None
+120	several sources arms of items rewards	0	None
+121	training of discrete latent variable models	1	Manual
+122	action patterns	0	None
+123	boykov et al.	0	None
+124	a single update	0	None
+125	telephone numbers home addresses etc.	0	None
+126	reverberant and noisy environments	0	None
+127	graph representations	1	Automatic
+128	network datasets	1	Automatic
+129	psychological space	1	Automatic
+130	the image question answering qa	0	None
+131	a novel measure	0	None
+132	classification models	1	Automatic
+133	some restricted problem classes	0	None
+134	automated generation	1	Automatic
+135	effective hospital resource allocation	1	Manual
+136	the group membership	0	None
+137	more attention	0	None
+138	the agreement of my coauthors	0	None
+139	learning object detectors	1	Manual
+140	a simulator	0	None
+141	source domains	1	Automatic
+142	medical image analysis	1	Automatic
+143	a variable	1	Automatic
+144	high level semantic image features	1	Manual
+145	two unsupervised learning layers ul layers	0	None
+146	a useful nonparametric	0	None
+147	their extensions called deep belief networks	0	None
+148	the goodness of fit	1	Automatic
+149	both resources	0	None
+150	an unknown distribution	1	Automatic
+151	ordinary languages	0	None
+152	scienti fic and engineering research	0	None
+153	low level sensor readings	1	Manual
+154	1 x	0	None
+155	the internet and the web	0	None
+156	collective pheromone	0	None
+157	classification tasks	1	Manual
+158	the possible permutations	0	None
+159	the society	1	Automatic
+160	an efficient algorithmic framework	0	None
+161	model averaging in large scale networks	1	Manual
+162	the task of object recognition	0	None
+163	modern retrieval systems	1	Manual
+164	vision via convolutional neural networks cnns	1	Manual
+165	challenging problems	1	Automatic
+166	bots	0	None
+167	consistent foundation	1	Automatic
+168	blind source separation	0	None
+169	developing countries	0	None
+170	greedy optimization methods	1	Manual
+171	parallel sentences	1	Automatic
+172	english subtask	0	None
+173	a mass gathering	0	None
+174	a quasi monte carlo	0	None
+175	trained end	0	None
+176	work on robust subspace recovery	0	None
+177	the optimal solution	0	None
+178	an incredible feat	0	None
+179	a vast prevalent topic	0	None
+180	maturity	0	None
+181	low energies	0	None
+182	ann automatic speech recognition	1	Automatic
+183	more and more attentions	0	None
+184	a linear function of known action	0	None
+185	posterior distributions	1	Automatic
+186	a hilbert	0	None
+187	a simple and general variant	0	None
+188	the distribution of exogenous noises	0	None
+189	varying angles	0	None
+190	weights	0	None
+191	the fuzzy sets	0	None
+192	the past decade	0	None
+193	the user issued query	0	None
+194	utterances in isolation	0	None
+195	a recently raised methodology	0	None
+196	basic theories	1	Automatic
+197	approximate nearest neighbors	1	Manual
+198	the arm	0	None
+199	deepfool	0	None
+200	a type	1	Automatic
+201	the submolecular resolution in close	0	None
+202	as random forests	0	None
+203	the approach	0	None
+204	our audio scene recognition system	0	None
+205	a fixed non linear activation function	0	None
+206	english	0	None
+207	observed behavior of an agent	0	None
+208	an arbitrary number	1	Automatic
+209	the stream	1	Automatic
+210	fashion mnist	0	None
+211	the task of semantic alignment	0	None
+212	1996 groenendijk 1999	0	None
+213	the aim	0	None
+214	edge correction	1	Automatic
+215	digital	1	Automatic
+216	several typically related sparse vectors	0	None
+217	very large numbers of parameters	0	None
+218	patch	0	None
+219	the challenging problems	1	Automatic
+220	conversations	1	Automatic
+221	joint multi subject	0	None
+222	combinatorial optimization	1	Automatic
+223	deep learning in vision	1	Automatic
+224	electricity in power grids	0	None
+225	stochastic bandit problems	1	Automatic
+226	the explosion	0	None
+227	user acceptance of artificial intelligence agents	1	Manual
+228	biogeography	0	None
+229	exmlds	0	None
+230	intelligent autonomous machines	1	Manual
+231	conditional image generation	1	Automatic
+232	demon	0	None
+233	graph	1	Manual
+234	target classes	1	Manual
+235	the parameter transfer approach	0	None
+236	the traditional supervised setting	0	None
+237	music information retrieval	1	Automatic
+238	cma	0	None
+239	researchers in the field of biocomputing	0	None
+240	the generalization risk	0	None
+241	the ell 1 norm	0	None
+242	the very similar objects	0	None
+243	gps for interpolation regression and classification	1	Manual
+244	a primary modality of human perception	0	None
+245	perch	0	None
+246	public interactions	1	Automatic
+247	insider threats	1	Manual
+248	genomics	1	Manual
+249	the continuing development and improvement	0	None
+250	the source	1	Automatic
+251	consideration	1	Automatic
+252	a baseline classifier	0	None
+253	understanding physical phenomena	0	None
+254	factored markov decision processes fmdps	1	Manual
+255	plp	0	None
+256	particle filter	1	Automatic
+257	the selected mixture components	0	None
+258	existing models	1	Automatic
+259	spatial pixelcnn a conditional autoregressive model	0	None
+260	many existing network embedding methods	0	None
+261	the success of deep convolutional networks	0	None
+262	diffusion type	1	Automatic
+263	breakthrough results	0	None
+264	the privacy of the training data	0	None
+265	computer poetry generation	1	Manual
+266	neighbor	0	None
+267	multiple criteria decision analysis	1	Manual
+268	humans in this respect	0	None
+269	source tasks	1	Automatic
+270	few examples	0	None
+271	regret bounds	1	Manual
+272	the user s devices	0	None
+273	heterogeneous domains	1	Automatic
+274	markov chain monte carlo mcmc algorithms	1	Manual
+275	a kernel	1	Automatic
+276	a mathematical theory	1	Automatic
+277	standard benchmark datasets	1	Manual
+278	the art classifiers	0	None
+279	one subspace	0	None
+280	multiple gravitational wave signals	1	Manual
+281	risk behaviors	0	None
+282	a widely used class	0	None
+283	sequence framework	1	Automatic
+284	a predefined set of object	0	None
+285	customers that arrive over time	0	None
+286	the specific data source	0	None
+287	the natural image distribution	0	None
+288	the diverse brain functionalities	0	None
+289	realistic samples	1	Manual
+290	a divide	1	Automatic
+291	other fast deep architectures	0	None
+292	discretized images	1	Manual
+293	powerful latent representations of words	1	Manual
+294	the emergence	0	None
+295	online social networking services	1	Manual
+296	medicine	0	None
+297	traditional nearest points	0	None
+298	practice	0	None
+299	groenendijk	0	None
+300	omnidirectional cameras	0	None
+301	heterogeneous systems	0	None
+302	a recurrent architecture	1	Automatic
+303	the automatic machine learning community	0	None
+304	other processes	1	Automatic
+305	the approaches and methods	0	None
+306	rich environments	1	Automatic
+307	a vexing problem	1	Automatic
+308	propagation neural network	1	Automatic
+309	a natural bayesian nonparametric extension	0	None
+310	hci researchers	0	None
+311	random matrix theory	1	Automatic
+312	similar performance	0	None
+313	3d pose of a human body	0	None
+314	a general characterization	0	None
+315	combiners or meta learners	1	Manual
+316	id photos	0	None
+317	the characteristics	1	Automatic
+318	a single consensus	0	None
+319	a developmental framework	0	None
+320	very large amounts	0	None
+321	online learning based stochastic methods	1	Manual
+322	all kinds	0	None
+323	lloyd shapley	0	None
+324	the generative adversarial nets	0	None
+325	unknown distribution	1	Automatic
+326	ii minimization	0	None
+327	a pain level	0	None
+328	similarities	1	Automatic
+329	transparency	1	Automatic
+330	square loss	0	None
+331	posterior clusterings	1	Manual
+332	a core	1	Automatic
+333	distance metric	1	Automatic
+334	french translation	1	Automatic
+335	a variety of pattern recognition tasks	0	None
+336	locations and distances between them	0	None
+337	the two nodes of a graph	0	None
+338	values for houses	0	None
+339	dnn model compression	1	Automatic
+340	inherent grouping	1	Automatic
+341	an important direction	0	None
+342	awareness	0	None
+343	neocortical communication via the thalamus	0	None
+344	only a small number	0	None
+345	archaeological objects	0	None
+346	their lack of common sense knowledge	0	None
+347	a powerful class	0	None
+348	sequential signals	1	Automatic
+349	the daunting computational cost	0	None
+350	a user selected mcmc sampler	0	None
+351	a performance analysis	0	None
+352	training activity recognition classifiers	1	Manual
+353	the generalization error	0	None
+354	correlation alignment coral	1	Manual
+355	more spatio temporal information	0	None
+356	an image given the audio signal	0	None
+357	rent neural networks rnns	1	Automatic
+358	a data source	1	Automatic
+359	covariate shift training source data	1	Manual
+360	dictionary screening	0	None
+361	the 3d visualization	1	Automatic
+362	a frequent comorbidity	0	None
+363	sequences tree nodes vectors	1	Manual
+364	clinicians	0	None
+365	cognitive radio systems	0	None
+366	negative samples	0	None
+367	articles	0	None
+368	a high dimensional	0	None
+369	mobile based photography	0	None
+370	various active learning methods	0	None
+371	the various domains	0	None
+372	justification	0	None
+373	scheduling problems	1	Automatic
+374	the expectation maximization	0	None
+375	a relationship	0	None
+376	the main variations of interest	0	None
+377	three dimensional space	1	Automatic
+378	a general	0	None
+379	means of the variational autoencoder vae	0	None
+380	exposure	0	None
+381	their previous works	0	None
+382	finite mixtures of nonparametric product distributions	1	Manual
+383	resource constrained platforms	1	Manual
+384	hidden layers	1	Automatic
+385	deep amtfl	0	None
+386	dapip	0	None
+387	covariates	0	None
+388	alpha divergences	1	Manual
+389	around low dimensional submanifolds of m	0	None
+390	contextual bandit	1	Manual
+391	a controversial object	0	None
+392	a region	0	None
+393	the linear svm	0	None
+394	static images	1	Automatic
+395	the use of deep learning algorithms	0	None
+396	most mathcal	0	None
+397	weighted subsets	0	None
+398	limited computational resources	1	Manual
+399	the physical source	0	None
+400	unlabeled data	1	Manual
+401	a subset of the processes	0	None
+402	the dirichlet process	0	None
+403	ambiguity	0	None
+404	a reflexion	0	None
+405	the content	0	None
+406	the pediatric intensive care unit picu	0	None
+407	a personalized policy	0	None
+408	1 ldots n	0	None
+409	medical imaging	1	Automatic
+410	conventional expected value preferences	0	None
+411	an ever expanding range	0	None
+412	a reproducing kernel hilbert space rkhs	0	None
+413	random field	1	Automatic
+414	huge attention	0	None
+415	image processing and imaging	1	Automatic
+416	human life	0	None
+417	different representations of the data	1	Manual
+418	lp relaxation based message passing algorithms	1	Manual
+419	discrete loss functions	1	Manual
+420	many more variables	1	Automatic
+421	pathological damage of the retina	0	None
+422	a fixed structure estimate	0	None
+423	the choice of the approximating posterior	0	None
+424	kingma2015	0	None
+425	iterative design methodology	1	Automatic
+426	enabling speech	0	None
+427	dynamical systems	1	Automatic
+428	x.	0	None
+429	the newtonian gravitational potential	0	None
+430	recognition aor	1	Automatic
+431	items products other users etc.	0	None
+432	a wide spectrum of applications	0	None
+433	a time homogeneous markov chain	0	None
+434	the uncertainty issues	0	None
+435	geometric invariance properties	1	Manual
+436	p and q	0	None
+437	people living in lisbon	0	None
+438	this difficulty	0	None
+439	sequence transduction	1	Automatic
+440	auctions	0	None
+441	suzuki 1996	0	None
+442	background convolutional neural networks	0	None
+443	a new set of tools	0	None
+444	exchange spikes	1	Manual
+445	patient s quality	1	Automatic
+446	the advanced analytics	0	None
+447	a smaller alternative	0	None
+448	studies on ensemble methods for classification	0	None
+449	a limited amount of training data	0	None
+450	verbal means	0	None
+451	a single image	1	Automatic
+452	bayesian optimization criteria	1	Manual
+453	complex dynamic systems	1	Automatic
+454	network intrusion analysis	1	Automatic
+455	units in deep convolutional networks	1	Manual
+456	m type	1	Automatic
+457	publicly available digital video footage	0	None
+458	its core components	1	Automatic
+459	the purported black box nature	0	None
+460	error correcting codes.the most dramatic instance	0	None
+461	a strong push	0	None
+462	a number of problems	0	None
+463	a bag of words	0	None
+464	tuning	0	None
+465	close friendships	0	None
+466	this success	0	None
+467	a novel diverse feature selection method	0	None
+468	both spectral and contextual characteristics	0	None
+469	the form of first order rules	0	None
+470	the industry	0	None
+471	the efficacy	0	None
+472	the notion of meta mining	0	None
+473	a cognitive task	1	Automatic
+474	place	0	None
+475	posterior sampling for reinforcement learning psrl	1	Manual
+476	a sum	0	None
+477	knowledge between a human	0	None
+478	academic researchers	0	None
+479	p values in regression settings	1	Manual
+480	slot annotations	1	Automatic
+481	at least a portion	0	None
+482	incomplete masked training data itkrmm	0	None
+483	deep neural networks	1	Automatic
+484	randomization	1	Manual
+485	financial news sources	0	None
+486	an influential boosting algorithm	0	None
+487	upper bounds	1	Automatic
+488	low rank modeling	1	Automatic
+489	real world datasets	1	Manual
+490	each interaction with the world	0	None
+491	l 0 norm regularization	1	Manual
+492	cancelable biometric technologies	0	None
+493	utmost importance	0	None
+494	the most basic functions	0	None
+495	samples of different domains	0	None
+496	the probability	0	None
+497	numerous large scale applications	0	None
+498	the large volume principle	0	None
+499	dense vector representations of symbols	1	Manual
+500	the subject	1	Automatic
+501	the total feature cost	0	None
+502	diffusion mri dmri	0	None
+503	raw clinical notes and pathology reports	0	None
+504	linear principal component analysis	1	Automatic
+505	the aim of this paper	0	None
+506	rapid identification	1	Automatic
+507	generator outputs	1	Manual
+508	a novel model for multimodal learning	0	None
+509	the problem of predicting preterm birth	0	None
+510	the primary metric	0	None
+511	the preceding three decades	0	None
+512	simple geometric operations	1	Manual
+513	the image information	1	Automatic
+514	google	1	Automatic
+515	a set of meaningful regions	0	None
+516	drawings of common objects	0	None
+517	some density p on r d.	0	None
+518	face photographs	1	Automatic
+519	real world multimedia	1	Manual
+520	professional grade software applications	1	Manual
+521	discourse connectives	0	None
+522	great importance in signal processing	1	Automatic
+523	correspondence	1	Automatic
+524	flat dirichlet multinomial fdm	1	Manual
+525	analysis communities	0	None
+526	the art in image compression	1	Automatic
+527	a problem that involves retrieve	0	None
+528	error characteristics of a system	1	Manual
+529	sample efficiency	1	Automatic
+530	n dimension	0	None
+531	a classifier s generalization performance	0	None
+532	atrial fibrillation	0	None
+533	many visual recognition tasks	0	None
+534	non stationary user intention	0	None
+535	several improvements	1	Automatic
+536	nation states	1	Automatic
+537	a restarting strategy	0	None
+538	goals of a particular study	0	None
+539	a novel dosage form	0	None
+540	creative use	1	Automatic
+541	a principled way	1	Automatic
+542	rich creative and revealing questions	0	None
+543	image captioning	1	Automatic
+544	other areas	1	Automatic
+545	data classification map data	0	None
+546	policy gradient	1	Manual
+547	performances	1	Automatic
+548	an agreement or consensus data	0	None
+549	business and engineering fields	0	None
+550	the learning rate	1	Automatic
+551	a method for parameter estimation	0	None
+552	tasks that have long term dependencies	1	Manual
+553	a nonparametric bayesian method	0	None
+554	the growth of the internet	0	None
+555	keyword spotting kws	1	Manual
+556	video analytics	1	Automatic
+557	various types	0	None
+558	the order of rules	0	None
+559	another density	0	None
+560	the art online learning approaches	0	None
+561	many disciplines e.g.	0	None
+562	support vector machines	1	Automatic
+563	gaussians	1	Automatic
+564	fixed length	1	Automatic
+565	an optimal way	0	None
+566	one camera	0	None
+567	advanced feature extraction techniques	1	Manual
+568	the burden of security officers	0	None
+569	data shared on the web	0	None
+570	image pixels	0	None
+571	the development of ml algorithms	0	None
+572	the discrete distribution clustering algorithm	0	None
+573	slow feature analysis sfa	1	Manual
+574	a discrete function	0	None
+575	the network variables given evidence	0	None
+576	machine learning e.g.	1	Automatic
+577	a collection of diverse classifiers	0	None
+578	deep convolutional neural networks cnn	1	Manual
+579	accurate estimation	1	Manual
+580	theory	1	Automatic
+581	multiclass classifier design	1	Manual
+582	the input history in their units	0	None
+583	a multi modal reward function	0	None
+584	robust image analysis	1	Automatic
+585	the job recommendation task	0	None
+586	human dialogue	1	Automatic
+587	antigen	0	None
+588	text descriptions	1	Automatic
+589	vaes	0	None
+590	as powerful techniques	0	None
+591	a given system	1	Automatic
+592	input data streams	1	Automatic
+593	high level tasks	1	Manual
+594	smart computer vision systems	1	Automatic
+595	different data	1	Automatic
+596	a summary	0	None
+597	inherent properties of the network	1	Manual
+598	large formal libraries	0	None
+599	current neural network based image classifiers	0	None
+600	facial keypoints	0	None
+601	3d visual content delivery	1	Manual
+602	neuroscience and artificial intelligence	1	Automatic
+603	perceptual capabilities of humans	0	None
+604	recent advances in semi	0	None
+605	factor analysis fa	1	Automatic
+606	diverse levels of visual categorization	1	Manual
+607	a previously unseen input	0	None
+608	a vector autoregressive var model	0	None
+609	massively parallel computing devices	1	Manual
+610	mason	0	None
+611	direct communication	1	Automatic
+612	the article	0	None
+613	a fresh data science perspective	0	None
+614	sufficient amounts	0	None
+615	exponential families and mixture families	0	None
+616	the use of image transformations	0	None
+617	action classification and localization	1	Automatic
+618	the unfavorable o n3 scaling	0	None
+619	end acoustic modelling	1	Automatic
+620	a pose grammar	1	Automatic
+621	the validity	0	None
+622	the loss of particle diversity	0	None
+623	a cnn network	1	Automatic
+624	neurons between splitting layers	1	Manual
+625	event streams	0	None
+626	a competitive detection task	0	None
+627	the most important problems in ai	0	None
+628	binary problems	1	Automatic
+629	the group structure of the features	0	None
+630	great interests	0	None
+631	a trade off parameter	1	Automatic
+632	a total	1	Automatic
+633	a general algorithm	1	Automatic
+634	2016	0	None
+635	stochastic gradient descent optimization	1	Automatic
+636	description or title	0	None
+637	the metric between two image sets	0	None
+638	listener s subjective experience of music	0	None
+639	graph based methods	1	Manual
+640	powerful nonlinear filters	1	Manual
+641	a small 3 layer feedforward	0	None
+642	the intentions	0	None
+643	infomax principle	1	Manual
+644	a novel activity dataset	0	None
+645	linguistic descriptions of movies	1	Manual
+646	effective and efficient mitigation of malware	1	Manual
+647	unified approach	1	Automatic
+648	kernel k	1	Automatic
+649	subsets	0	None
+650	von neumann dual algorithms	1	Manual
+651	one to one	0	None
+652	a recently proposed framework	0	None
+653	an asymptotic convergence analysis	1	Automatic
+654	complex data such as natural images	0	None
+655	the art cnn models	0	None
+656	a painting	0	None
+657	model complex large scale systems	0	None
+658	biological specimens	0	None
+659	expert demonstrations of the optimal policy	0	None
+660	many hard optimization problems	0	None
+661	temporal reasoning	1	Automatic
+662	clinical management of several cardiac diseases	0	None
+663	protein	0	None
+664	the abilities of participants	0	None
+665	annotated visual grasping datasets	1	Manual
+666	x right	0	None
+667	an image of the document	0	None
+668	robustness memory efficiency	1	Manual
+669	temporally extended actions and options	0	None
+670	exploding gradients	1	Manual
+671	scientific disciplines	0	None
+672	class dependent error	1	Manual
+673	increasing evaluation speed	0	None
+674	very few samples	0	None
+675	the time and energy cost	0	None
+676	keyphrases and relations	1	Manual
+677	predictions or visual explanations	0	None
+678	understanding genomics	0	None
+679	formal verification	1	Automatic
+680	their self training potential	0	None
+681	varied infrastructures	1	Automatic
+682	asynchronous sequential data	1	Manual
+683	semantic parsing	1	Automatic
+684	algorithm	1	Automatic
+685	recent improvements	1	Automatic
+686	robust principal component analysis	1	Automatic
+687	a part	0	None
+688	the dendritic cell algorithm	0	None
+689	both neural networks	1	Automatic
+690	kidney diseases	0	None
+691	complex morphology	1	Manual
+692	a generalized hopfield associative memory network	0	None
+693	exploitation	0	None
+694	em small clusters	0	None
+695	a straightforward normality measure	0	None
+696	certain smooth hypothesis classes	0	None
+697	an adversarial distance	0	None
+698	motion optic flow	0	None
+699	the nonparametric regression setting	0	None
+700	their simplicity	0	None
+701	convolutional neural networks cnns	1	Manual
+702	substation service providers	1	Automatic
+703	a three level hierarchical bayesian model	0	None
+704	automatic speech recognition asr systems	1	Manual
+705	real world blurred images	1	Manual
+706	the music sight reading process	0	None
+707	sparsity constrained optimization	1	Manual
+708	binarization of digital documents	1	Manual
+709	forgy s	0	None
+710	fuel	0	None
+711	a dramatic leap	0	None
+712	principle powerful models	0	None
+713	general purpose processors	1	Manual
+714	coniferous deciduous classification of individual trees	1	Manual
+715	slim and accurate deep neural networks	1	Manual
+716	an earlier article	0	None
+717	the given example	0	None
+718	local meshes	0	None
+719	gearbox faults detection	1	Automatic
+720	lstm	1	Manual
+721	labellings	0	None
+722	agnostic schemes	0	None
+723	random walk	1	Manual
+724	acoustic modeling methods	0	None
+725	prediction algorithms	1	Automatic
+726	tensor factorization models	1	Manual
+727	large volumes	0	None
+728	a textual query	0	None
+729	a killer domain	0	None
+730	semiparametric contextual bandits	1	Manual
+731	multimodal datasets	1	Manual
+732	deep learning	1	Automatic
+733	a different insight	1	Automatic
+734	end model	1	Automatic
+735	balanced class distributions	1	Manual
+736	an initial attempt	0	None
+737	environmental acoustic	1	Automatic
+738	the posterior distribution over parameters given	0	None
+739	decompose a partially corrupted matrix	0	None
+740	the new yorker	0	None
+741	the domain of latitude	0	None
+742	lower to higher resolution feature	0	None
+743	sparse	0	None
+744	trex	0	None
+745	free test	1	Automatic
+746	ultra fast ultrasound us	0	None
+747	a simple yet powerful method	0	None
+748	multiple	1	Automatic
+749	the jigsaw puzzle problem	0	None
+750	inhomogeneities	0	None
+751	general stochastic environments	1	Manual
+752	bilateral processes	1	Automatic
+753	an observed context	0	None
+754	a common task	0	None
+755	only one free parameter	0	None
+756	metal turning process	1	Automatic
+757	the vector	1	Automatic
+758	the acoustic space	0	None
+759	genetic risk factors	0	None
+760	the problem of multivariate regression	0	None
+761	severe theoretical limits	0	None
+762	videos	0	None
+763	ecml pkdd discovery challenge 2010	0	None
+764	fully connected layers	1	Automatic
+765	the class	0	None
+766	bone quality	1	Automatic
+767	state estimators	1	Manual
+768	this case	1	Automatic
+769	the frame problem	0	None
+770	good generalization performance	1	Manual
+771	training input output recurrent neural networks	1	Manual
+772	discrete probabilistic models	1	Manual
+773	computational model	1	Automatic
+774	classifiers with rejection	1	Manual
+775	acquired knowledge in order	0	None
+776	cryo electron microscopy	0	None
+777	neural activation in the brain	0	None
+778	accurate manual labeling	1	Manual
+779	many real applications	1	Automatic
+780	esp game	0	None
+781	a similar manner	0	None
+782	the geographical distribution	1	Automatic
+783	movies	0	None
+784	these scenarios characters	0	None
+785	gated units	1	Automatic
+786	the deep reinforcement learning community	0	None
+787	any positive integer k	0	None
+788	sets of sentences documents iii	0	None
+789	deep neural activations	1	Manual
+790	electrocardiographic ecg signals	0	None
+791	error rates	1	Automatic
+792	human face to face communication	0	None
+793	domain specific and application specific criteria	1	Manual
+794	enmity	0	None
+795	a relevance measure	1	Automatic
+796	coherent properties and rules	0	None
+797	collaborative descriptors between deeply	0	None
+798	other services they have never used	0	None
+799	different brain areas	0	None
+800	the lipschitz constant	0	None
