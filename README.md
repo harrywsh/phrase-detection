@@ -28,7 +28,7 @@ True
 If the last line is "True" and returns no errors, you're good to go with respect to spaCy GPU compatibility. Before proceeding onto the next steps, execute `python -m spacy download en_core_web_sm`.
 1. `cd` into the repository directory and run `pip install -r requirements.txt`
 2. `cd` into the `final_stuff` subdirectory. This will be the main working directory henceforth.
-3. `final_framework_v6.py` is the script to be run to execute the latest framework. (FYI: It uses helper scripts: `prdualrank.py`, `wikiscore.py`, `extractor_helpers.py`.)
+3. `final_framework_v9_precision.py` or `final_framework_v9_recall.py is the script to be run to execute the latest framework. (FYI: It uses helper scripts: `prdualrank.py`, `wikiscore.py`, `extractor_helpers.py`.)
 4. Place your input data in `./data/` directory. Make sure to sanitize the input! Lower case all text, and remove all non-alphanumeric text except periods.
 5. An example command to run the script is: `python3 final_framework_v6.py arxiv_titles_and_abstracts_short.txt 350 750 test_run.txt 9`
       1. `arxiv_titles_and_abstracts_short.txt`: This parameters indicates that the input data file is `./data/arxiv_titles_and_abstracts_short.txt`
