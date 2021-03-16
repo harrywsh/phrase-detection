@@ -1,18 +1,18 @@
-# Automated Domain-based Keyword Detection :zap: :rocket:
-Keyword detection for a particular domain, based on the [PRDualRank](https://dl.acm.org/doi/10.1145/1935826.1935933) framework! 
+# Automated Domain-based Keyword Detection
+Keyword detection for a particular domain, based on the [PRDualRank](https://dl.acm.org/doi/10.1145/1935826.1935933) framework.
 
 ## Contributors
-Work done during Fall 2019, Spring 2020, Summer 2020 at [FORWARD Lab](http://www.forwarddatalab.org/) @ [UIUC](https://cs.illinois.edu/), by Dipro Ray and Shuhan Wang.
+Work done during Fall 2019, Spring 2020, Summer 2020, Fall 2020 at [FORWARD Lab](http://www.forwarddatalab.org/) @ [UIUC](https://cs.illinois.edu/), by Dipro Ray and Shuhan Wang.
 
-## Maintainers
+## Previous Maintainers
 Dipro Ray (dipror2@illinois.edu)
 
 ## Where do I find X?
-* All source code files lie within `.py` files in the `./final_stuff/` directory.
+* All source code files lie within `.py` files in the `./final_stuff/` directory. The latest version of the scripts are `final_framework_v9_precision.py` and `final_framework_v9_recall.py`. All previous versions (v1 through v9) are also in the same directory. Most of the later versions differ primarily in the kind of ranking function used.
+* Metrics and associated scripts and ipynbs lie in the `./development_ipynbs/` directory. You can find the code to compute keyword precision and recall here.
 * Input data, and output data are stored in `./final_stuff/data/` and `./final_stuff/outputs/` respectively.
-* [Only for repo maintainers] In-development code can be found in `./development_*/` directories.
-* [Only for repo maintainers] Archives can be found in the `./old/` subdirectory of each folder.
-* [Only for repo maintainers] Metrics and associated scripts and ipynbs lie in the `./metrics/` directory.
+* Archives can be found in the `./old/` subdirectory of each folder, as well as the `./metrics/` directory.
+
 
 ## How do I run the framework?
 If you'd like to use spaCy's GPU capability, make sure you have access to a GPU. (For Nvidia users, use `nvidia-smi` to check GPU info.) Then, install CUDA Toolkit 10.2 (**note the version!** spaCy/cupy isn't compatible with the latest 11.0 version yet, as far as I know.) Use `nvcc --version` to ensure CUDA drivers (as well as the correct version) have been installed. Execute `pip install -U spacy[cuda102]`. Then, try:
